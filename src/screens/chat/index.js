@@ -2,13 +2,13 @@ import {Image, TouchableOpacity, Text, View} from 'react-native';
 import React from 'react';
 import styles from './styles';
 import Images from '../../assets';
-import HeaderHome from '../../component/header';
+import Header from '../../component/header';
 import Drawer from '../../navigation/drawer';
 const Chat = () => {
   const [visible, setVisible] = React.useState(false);
   return (
     <View style={styles.container}>
-      <HeaderHome title={'AZFIN CHAT'} btnRight={() => setVisible(true)} />
+      <Header title={'AZFIN CHAT'} btnRight={() => setVisible(true)} />
       <View style={styles.item}>
         <Image source={Images.iconCircle} style={styles.icon} />
         <TouchableOpacity style={styles.btn}>

@@ -2,7 +2,7 @@ import {TouchableOpacity, Text, View, Image} from 'react-native';
 import React from 'react';
 import styles from './styles';
 import Images from '../../assets';
-const HeaderHome = props => {
+const Header = props => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={props.btnLeft}>
@@ -16,4 +16,4 @@ const HeaderHome = props => {
   );
 };
 
-export default HeaderHome;
+export default Header;

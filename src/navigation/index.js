@@ -11,6 +11,7 @@ import Chat from '../screens/chat';
 import TabBarCustom from './tabbarCustom';
 import Images from '../assets';
 import SplashScreen from 'react-native-splash-screen';
+import PlanProperty from '../screens/planProperty';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -91,6 +92,11 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name="TabScreen"
           component={TabScreen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="PlanProperty"
+          component={PlanProperty}
         />
       </Stack.Navigator>
     </NavigationContainer>

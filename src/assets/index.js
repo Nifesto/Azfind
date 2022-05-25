@@ -1,5 +1,14 @@
 const Images = {
   //icon
+  iconProfile: require('./icons/iconProfile.png'),
+  iconCopy: require('./icons/iconCopy.png'),
+  iconPaper: require('./icons/iconPaper.png'),
+  iconDone: require('./icons/iconDone.png'),
+  iconWait: require('./icons/iconWait.png'),
+  iconMoney: require('./icons/iconMoney.png'),
+  iconSwitch: require('./icons/iconSwitch.png'),
+  iconMore: require('./icons/iconMore.png'),
+  iconLoginBy: require('./icons/iconLoginBy.png'),
   iconBack: require('./icons/iconBack.png'),
   iconDraw: require('./icons/iconDraw.png'),
   iconDropUp: require('./icons/iconDropUp.png'),
@@ -39,6 +48,12 @@ const Images = {
   iconTriangleRight: require('./icons/iconTriangleRight.png'),
   iconHeartRed: require('./icons/iconHeartRed.png'),
   iconHeart: require('./icons/iconHeart.png'),
+  iconLogo: require('./icons/logo.png'),
+  iconCheck: require('./icons/iconCheck.png'),
+  iconChecked: require('./icons/iconChecked.png'),
+  //Images
+  posterHome: require('./images/posterHome.png'),
+
   iconCircle: require('./icons/iconCircle.png'),
   iconTakePhoto: require('./icons/iconTakePhoto.png'),
   iconSuccess: require('./icons/iconSuccess.png'),

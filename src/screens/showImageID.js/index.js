@@ -4,7 +4,6 @@ import {WIDTH} from '../../base/core';
 
 const ShowImageID = ({navigation, route}) => {
   const data = route.params?.data;
-  console.log(data.base64);
   var img = 'data:image/png;base64,';
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

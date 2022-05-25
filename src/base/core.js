@@ -40,6 +40,7 @@ const FONTSIZE = {
   f_34: 34 * scale,
   f_24: 24 * scale,
   f_20: 20 * scale,
+  f_19: 19 * scale,
   f_18: 18 * scale,
   f_16: 16 * scale,
   f_15: 15 * scale,

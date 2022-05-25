@@ -12,8 +12,16 @@ import TabBarCustom from './tabbarCustom';
 import Images from '../assets';
 import SplashScreen from 'react-native-splash-screen';
 import PlanProperty from '../screens/planProperty';
+<<<<<<< HEAD
 import CameraScreen from '../screens/testCamera';
 import ShowImageID from '../screens/showImageID.js';
+=======
+import KeyOpen from '../screens/smartOTP';
+import CodeOTP from '../screens/codeOTP';
+import Success from './../screens/Success/index';
+import Form from '../screens/formTS';
+import OpenAccount from '../screens/OpenAccout';
+>>>>>>> 78ee614f231640da720fa79dc373a8bbf62b6a02
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -109,6 +117,28 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name="ShowImageID"
           component={ShowImageID}
+          name="KeyOpen"
+          component={KeyOpen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="CodeOTP"
+          component={CodeOTP}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Success"
+          component={Success}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Form"
+          component={Form}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="OpenAccount"
+          component={OpenAccount}
         />
       </Stack.Navigator>
     </NavigationContainer>

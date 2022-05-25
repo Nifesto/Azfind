@@ -112,7 +112,7 @@ const TestBar = () => {
       animate: true,
     });
   };
-  console.log('dataWidth', dataWidth);
+  
   return (
     <View style={{flex: 1, backgroundColor: COLOR.WHITE_P}}>
       <Header title={'Đào tạo'} showIcon />

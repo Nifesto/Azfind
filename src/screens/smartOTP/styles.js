@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
@@ -7,13 +8,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#E5E5E5',
   },
   contain: {
-    paddingHorizontal: (windowWidth * 19) / 428,
+    paddingHorizontal: WIDTH * 19,
     alignItems: 'center',
   },
   logo: {
-    height: (windowWidth * 49) / 428,
-    width: (windowWidth * 145) / 428,
-    marginTop: (windowWidth * 60) / 428,
+    height: WIDTH * 49,
+    width: WIDTH * 145,
+    marginTop: WIDTH * 60,
   },
   input_container: {
     flexDirection: 'row',
@@ -24,56 +25,56 @@ const styles = StyleSheet.create({
   text: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: (windowWidth * 85) / 428,
-    height: (windowWidth * 85) / 428,
-    backgroundColor: '#FFF',
-    marginTop: (windowWidth * 27) / 428,
+    width: WIDTH * 85,
+    height: WIDTH * 85,
+    backgroundColor: COLOR.WHITE_P,
+    marginTop: WIDTH * 27,
   },
   number: {
-    backgroundColor: '#fff',
-    width: (windowWidth * 85.75) / 428,
-    height: (windowWidth * 65.33) / 428,
+    backgroundColor: COLOR.WHITE_P,
+    width: WIDTH * 87.75,
+    height: WIDTH * 65.33,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    marginTop: (windowWidth * 27.22) / 428,
-    marginLeft: (windowWidth * 25.86) / 428,
+    marginTop: WIDTH * 27.22,
+    marginLeft: WIDTH * 25.86,
   },
   keyboard: {
     width: '100%',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'flex-end',
-    paddingRight: (windowWidth * 40) / 428,
+    paddingRight: WIDTH * 40,
   },
   so: {
-    fontSize: 32,
-    color: '#000',
-    fontWeight: '600',
+    fontSize: FONTSIZE.f_34,
+    color: COLOR.BLACK_P,
+    fontFamily: FONT_FAMILY.medium,
   },
   x: {
-    width: (windowWidth * 25.42) / 428,
-    height: (windowWidth * 25.42) / 428,
-    margin: 10,
+    width: WIDTH * 25.42,
+    height: WIDTH * 25.42,
+    margin: WIDTH * 10,
   },
   so_1: {
-    fontSize: 70,
-    color: '#404040',
-    fontWeight: '600',
+    fontSize: FONTSIZE.f_70,
+    color: COLOR.BLACK_P,
+    fontFamily: FONT_FAMILY.medium,
   },
   txtCf: {
     color: '#fff',
-    fontSize: 20,
-    fontWeight: '600',
+    fontSize: FONTSIZE.f_20,
+    fontFamily: FONT_FAMILY.medium,
   },
   confirm: {
-    backgroundColor: '#0E448A',
+    backgroundColor: COLOR.MAIN_P,
     width: '100%',
-    height: (windowWidth * 60) / 428,
+    height: WIDTH * 60,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    marginTop: (windowWidth * 30) / 428,
+    marginTop: WIDTH * 30,
   },
 });
 export default styles;

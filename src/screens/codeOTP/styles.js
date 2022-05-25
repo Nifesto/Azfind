@@ -1,47 +1,51 @@
 import {StyleSheet, Dimensions} from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E5E5E5',
-    paddingHorizontal: (windowWidth * 19) / 428,
+  },
+  contain: {
+    paddingHorizontal: WIDTH * 19,
     alignItems: 'center',
   },
   text: {
-    marginTop: (windowWidth * 57) / 428,
+    marginTop: WIDTH * 57,
     color: '#000',
-    fontSize: 18,
+    fontSize: FONTSIZE.f_18,
   },
   text_1: {
-    marginTop: (windowWidth * 20) / 428,
+    marginTop: WIDTH * 20,
     color: '#000',
-    fontSize: 18,
+    fontSize: FONTSIZE.f_18,
   },
   input: {
-    letterSpacing: 5,
-    paddingHorizontal: 72,
-    marginTop: (windowWidth * 20) / 428,
+    letterSpacing: 10,
+    paddingHorizontal: WIDTH * 54,
+    marginTop: WIDTH * 20,
     backgroundColor: '#fff',
-    width: (windowWidth * 267) / 428,
-    height: (windowWidth * 56) / 428,
-    fontSize: 32,
+    width: WIDTH * 267,
+    height: WIDTH * 56,
+    fontSize: FONTSIZE.f_34,
     color: '#000',
     fontWeight: '600',
+    borderRadius: 5,
   },
   txtCf: {
     color: '#fff',
-    fontSize: 20,
-    fontWeight: '600',
+    fontSize: FONTSIZE.f_20,
+    fontFamily: FONT_FAMILY.medium,
   },
   confirm: {
-    backgroundColor: '#0E448A',
+    backgroundColor: COLOR.MAIN_P,
     width: '100%',
-    height: (windowWidth * 60) / 428,
+    height: WIDTH * 60,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    marginTop: (windowWidth * 337) / 428,
+    marginTop: WIDTH * 337,
   },
 });
 export default styles;

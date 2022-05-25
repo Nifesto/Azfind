@@ -96,10 +96,24 @@ const Home = ({navigation}) => {
           <Item
             src={Images.iconHand}
             content={'Kế hoạch\ntích sản'}
-            onPress={() => navigation.navigate('CameraScreen')}
+            onPress={() => {
+              navigation.navigate('Form');
+            }}
           />
-          <Item src={Images.iconHat} content={'Học tập'} />
-          <Item src={Images.iconChangeMoney} content={'Nộp/\nRútTiền'} />
+          <Item
+            src={Images.iconHat}
+            content={'Học tập'}
+            onPress={() => {
+              navigation.navigate('KeyOpen');
+            }}
+          />
+          <Item
+            src={Images.iconChangeMoney}
+            content={'Nộp/\nRútTiền'}
+            onPress={() => {
+              navigation.navigate('OpenAccount');
+            }}
+          />
           <Item src={Images.iconNews} content={'Tin trong\nngày'} />
           <Item src={Images.iconStar} content={'VIP'} />
         </View>

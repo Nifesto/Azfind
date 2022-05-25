@@ -71,11 +71,12 @@ const FONT_FAMILY = {
 };
 
 const ASYN = {
-  saveDataUser: 'saveDataUser',
-  fcmToken: 'fcmToken',
-  userName: 'userName',
-  password: 'password',
-  token: 'token',
+  SAVE_DATA_USER: 'SAVE_DATA_USER',
+  FCM_TOKEN: 'FCM_TOKEN',
+  USERNAME: 'USERNAME',
+  PASSWORD: 'PASSWORD',
+  TOKEN: 'TOKEN',
+  LANGUAGE:'LANGUAGE'
 };
 
 export {

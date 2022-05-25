@@ -19,6 +19,11 @@ import CodeOTP from '../screens/codeOTP';
 import Success from './../screens/Success/index';
 import Form from '../screens/formTS';
 import OpenAccount from '../screens/OpenAccout';
+import {useDispatch, useSelector} from 'react-redux';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {ASYN} from '../base/core';
+import i18n from '../translate/i18n';
+import {changeLanguage} from '../redux/reducer/reducerLanguage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -31,7 +36,7 @@ const TabScreen = () => {
         component={Home}
         options={{
           headerShown: false,
-          tabBarLabel: 'Trang chủ',
+          tabBarLabel: `${i18n.t('home')}`,
           tabBarIcon: Images.iconHome,
         }}
       />
@@ -40,7 +45,7 @@ const TabScreen = () => {
         component={PriceList}
         options={{
           headerShown: false,
-          tabBarLabel: 'Bảng giá',
+          tabBarLabel: `${i18n.t('priceList')}`,
           tabBarIcon: Images.iconChart,
         }}
       />
@@ -49,7 +54,7 @@ const TabScreen = () => {
         component={Property}
         options={{
           headerShown: false,
-          tabBarLabel: 'Tích sản',
+          tabBarLabel: `${i18n.t('property')}`,
           tabBarIcon: Images.iconWallet,
         }}
       />
@@ -58,7 +63,7 @@ const TabScreen = () => {
         component={Purchase}
         options={{
           headerShown: false,
-          tabBarLabel: 'Giao dịch',
+          tabBarLabel: `${i18n.t('purchase')}`,
           tabBarIcon: Images.iconPurchase,
         }}
       />
@@ -67,7 +72,7 @@ const TabScreen = () => {
         component={Chat}
         options={{
           headerShown: false,
-          tabBarLabel: 'Chat',
+          tabBarLabel: `${i18n.t('chat')}`,
           tabBarIcon: Images.iconChat,
         }}
       />
@@ -80,8 +85,23 @@ const TabScreen = () => {
 // };
 
 const AppNavigation = () => {
-  //   const dispatch = useDispatch();
-  //   const user = useSelector(state => state.ReducerAuth.user);
+  const dispatch = useDispatch();
+  const language = useSelector(state => state.language.language);
+  console.log('cvchonayu', language);
+  // React.useEffect(() => {
+  //   getlang();
+  // }, [language]);
+  // const getlang = async () => {
+  //   const lang = await AsyncStorage.getItem(ASYN.LANGUAGE);
+  //   console.log('lang', lang);
+  //   if (lang === 'en') {
+  //     i18n.locale = 'en';
+  //     dispatch(changeLanguage('en'));
+  //   } else {
+  //     i18n.locale = 'vi';
+  //     dispatch(changeLanguage('vi'));
+  //   }
+  // };
   const _CheckDataAccount = async () => {
     // const value = await AsyncStorage.getItem(ASYN.saveDataUser);
     // dispatch(ActionAuth.AutoLogin(value));
@@ -110,7 +130,7 @@ const AppNavigation = () => {
           name="CameraScreen"
           component={CameraScreen}
         />
-         <Stack.Screen
+        <Stack.Screen
           options={{headerShown: false}}
           name="ShowImageID"
           component={ShowImageID}

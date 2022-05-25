@@ -5,7 +5,12 @@ import styles from './styles';
 import HeaderHome from '../../component/headerHome';
 import Images from '../../assets';
 import Drawer from '../../navigation/drawer';
-import {COLOR, WIDTH} from '../../base/core';
+import {ASYN, COLOR, WIDTH} from '../../base/core';
+import {useDispatch, useSelector} from 'react-redux';
+import {changeLanguage} from '../../redux/reducer/reducerLanguage';
+// import {useTranslation} from 'react-i18next';
+import i18n from '../../translate/i18n';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const Item = props => {
   return (
     <TouchableOpacity style={styles.item} onPress={props.onPress}>
@@ -15,7 +20,25 @@ const Item = props => {
   );
 };
 const Home = ({navigation}) => {
+  const {t} = i18n;
+  const dispatch = useDispatch();
   const [visible, setVisible] = React.useState(false);
+  const language = useSelector(state => state.language.language);
+  console.log('cvchonayu', language);
+  // React.useEffect(() => {
+  //   getlang();
+  // }, [language]);
+  // const getlang = async () => {
+  //   const lang = await AsyncStorage.getItem(ASYN.LANGUAGE);
+  //   console.log('lang', lang);
+  //   if (lang === 'en') {
+  //     i18n.locale = 'en';
+  //     dispatch(changeLanguage('en'));
+  //   } else {
+  //     i18n.locale = 'vi';
+  //     dispatch(changeLanguage('vi'));
+  //   }
+  // };
   const [data] = React.useState([
     {
       name: 'FPTFPT',
@@ -92,6 +115,7 @@ const Home = ({navigation}) => {
     return (
       <>
         <Image source={Images.posterHome} style={styles.poster} />
+        <Text style={{alignSelf: 'center'}}>{i18n.t('home')}</Text>
         <View style={styles.bar}>
           <Item
             src={Images.iconHand}
@@ -114,8 +138,22 @@ const Home = ({navigation}) => {
               navigation.navigate('OpenAccount');
             }}
           />
-          <Item src={Images.iconNews} content={'Tin trong\nngày'} />
-          <Item src={Images.iconStar} content={'VIP'} />
+          <Item
+            src={Images.iconNews}
+            content={'Tin trong\nngày'}
+            onPress={() => {
+              i18n.locale = 'en';
+              dispatch(changeLanguage('en'));
+            }}
+          />
+          <Item
+            src={Images.iconStar}
+            content={'VIP'}
+            onPress={() => {
+              i18n.locale = 'vi';
+              dispatch(changeLanguage('vi'));
+            }}
+          />
         </View>
         <Text style={styles.title}>Bảng giá tích sản</Text>
         <View style={styles.barTopInfo}>

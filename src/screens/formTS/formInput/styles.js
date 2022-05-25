@@ -21,12 +21,7 @@ const styles = StyleSheet.create({
   //   justifyContent: 'space-between',
   //   width: 40,
   // },
-  input_1: {
-    width: '85%',
-    color: '#5178AA',
-    fontSize: FONTSIZE.f_15,
-    height: WIDTH * 40,
-  },
+
   input_2: {
     color: '#5178AA',
     borderWidth: 1,
@@ -66,6 +61,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: WIDTH * 5,
     marginTop: WIDTH * 7,
+    paddingVertical:0,
+    height:WIDTH*29
+
+  },
+  input_1: {
+    color: '#5178AA',
+    fontSize: FONTSIZE.f_15,
+    flex:1,
+    height:'100%',
+    padding:0
   },
   form: {
     paddingHorizontal: WIDTH * 16,

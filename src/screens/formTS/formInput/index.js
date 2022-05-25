@@ -34,9 +34,10 @@ const Hander = props => {
           value={valueMoney}
           onChangeText={onChangeTextMoney}
           placeholder={placeholderMoney}
-          keyboardType="number-pad"
+          keyboardType="numeric"
           style={styles.input_1}
           placeholderTextColor="#5178AA"
+          numberOfLines={1}
         />
         <Text style={styles.text_3}>đ/tháng</Text>
       </View>
@@ -92,11 +93,9 @@ const Hander = props => {
         />
         <Text style={styles.text_3}>đ</Text>
       </View>
-      <View style={{width: '100%', alignItems: 'center'}}>
-        <TouchableOpacity style={styles.btSet} onPress={onPress}>
-          <Text style={styles.setUp}>THIẾT LẬP</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity style={styles.btSet} onPress={onPress}>
+        <Text style={styles.setUp}>THIẾT LẬP</Text>
+      </TouchableOpacity>
     </View>
   );
 };

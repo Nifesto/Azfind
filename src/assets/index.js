@@ -38,7 +38,9 @@ const Images = {
   iconTriangleRight: require('./icons/iconTriangleRight.png'),
   iconHeartRed: require('./icons/iconHeartRed.png'),
   iconHeart: require('./icons/iconHeart.png'),
+  iconLogo: require('./icons/logo.png'),
   //Images
   posterHome: require('./images/posterHome.png'),
+ 
 };
 export default Images;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import styles from './style';
-import Images from '../../../../assets/index';
+import Images from '../../../assets';
 import {COLOR, WIDTH} from '../../../../base/core';
 const Register = () => {
   const [number, onChangeNumber] = React.useState('');

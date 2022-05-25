@@ -1,0 +1,148 @@
+import {StyleSheet, Text, View, Dimensions} from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    flex: 1,
+  },
+  info: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: WIDTH * 13,
+    marginHorizontal: WIDTH * 16,
+  },
+  info_1: {
+    marginHorizontal: WIDTH * 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: WIDTH * 13,
+  },
+  title: {
+    color: '#8A8A8A',
+    fontSize: FONTSIZE.f_15,
+  },
+  title_3: {
+    marginHorizontal: WIDTH * 16,
+    color: '#8A8A8A',
+    fontFamily: FONT_FAMILY.bold,
+    fontSize: FONTSIZE.f_14,
+  },
+  title_1: {
+    color: '#8A8A8A',
+    fontSize: FONTSIZE.f_15,
+    width: '30%',
+  },
+  title_2: {
+    width: WIDTH * 224,
+    color: '#8A8A8A',
+    fontSize: FONTSIZE.f_15,
+  },
+  input_1: {
+    width: WIDTH * 224,
+    height: WIDTH * 36,
+    borderWidth: 2,
+    borderRadius: 20,
+    color: 'rgba(29, 29, 29, 0.51)',
+    fontSize: FONTSIZE.f_15,
+    textAlignVertical: 'top',
+    borderColor: 'rgba(29, 29, 29, 0.24)',
+  },
+  render: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: WIDTH * 224,
+  },
+  registration: {
+    flexDirection: 'row',
+    marginTop: 5,
+    marginHorizontal: (windowWidth * 16) / 428,
+    alignItems: 'center',
+  },
+  box: {
+    width: WIDTH * 22,
+    height: WIDTH * 22,
+    borderWidth: 1,
+    borderRadius: 2,
+    marginRight: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  sucess: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#45B9A4',
+    width: WIDTH * 218,
+    height: WIDTH * 25,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  cmnd: {
+    width: WIDTH * 96.41,
+    height: WIDTH * 64.66,
+    borderRadius: 10,
+  },
+  line: {
+    backgroundColor: '#f1f1f1',
+    height: 5,
+    marginVertical: WIDTH * 19.34,
+  },
+  bank: {
+    marginHorizontal: WIDTH * 16,
+    marginVertical: WIDTH * 10,
+    height: WIDTH * 45,
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: WIDTH * 16,
+  },
+  delete: {
+    backgroundColor: ' red',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#DBDBDB',
+    width: WIDTH * 22,
+    height: WIDTH * 22,
+    borderRadius: (WIDTH * 22) / 2,
+  },
+  x: {
+    width: WIDTH * 12.16,
+    height: WIDTH * 12.16,
+  },
+  y: {
+    width: WIDTH * 9,
+    height: WIDTH * 16,
+  },
+  a: {
+    width: WIDTH * 10.65,
+    height: WIDTH * 7.81,
+    tintColor: COLOR.WHITE_P,
+  },
+  commit: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: WIDTH * 41,
+    marginHorizontal: WIDTH * 16,
+  },
+  button: {
+    backgroundColor: COLOR.MAIN_S,
+    width: WIDTH * 285,
+    height: WIDTH * 45,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    marginVertical: WIDTH * 49,
+  },
+  submit: {
+    fontSize: FONTSIZE.f_20,
+    fontFamily: FONT_FAMILY.bold,
+    color: COLOR.WHITE_P,
+  },
+});
+export default styles;

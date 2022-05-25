@@ -34,7 +34,7 @@ const Drawer = props => {
           flex: 1,
           backgroundColor: '#063167',
           width: WIDTH * 263,
-          top: WIDTH * 70,
+          top: WIDTH * 68,
           bottom: WIDTH * 48,
           position: 'absolute',
           right: -WIDTH * 25,

@@ -34,11 +34,13 @@ const COLOR = {
 };
 
 const FONTSIZE = {
+  f_70: 70 * scale,
   f_40: 40 * scale,
   f_28: 28 * scale,
   f_34: 34 * scale,
   f_24: 24 * scale,
   f_20: 20 * scale,
+  f_19: 19 * scale,
   f_18: 18 * scale,
   f_16: 16 * scale,
   f_15: 15 * scale,

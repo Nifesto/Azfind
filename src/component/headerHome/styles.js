@@ -4,9 +4,9 @@ import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLOR.MAIN_P,
-    height: WIDTH * 92,
-    paddingTop: WIDTH * 35,
-    paddingBottom: WIDTH * 13,
+    height: WIDTH * 90,
+    paddingTop: WIDTH * 20,
+    // paddingBottom: WIDTH * 13,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

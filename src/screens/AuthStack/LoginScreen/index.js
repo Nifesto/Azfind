@@ -5,7 +5,7 @@ import Images from '../../../assets';
 const Login = () => {
   const [number, onChangeNumber] = React.useState('');
   const [check, setCheck] = React.useState(true);
-  const [pass, setPass] = React.useState();
+  const [pass, setPass] = React.useState('');
   const Remember = () => {
     setCheck(!check);
   };
@@ -39,7 +39,7 @@ const Login = () => {
           }}>
           <TextInput
             style={{color: '#222'}}
-            onChangeText={pass => setPass}
+            onChangeText={pass => setPass()}
             value={pass}
             placeholder="Mật khẩu"
             placeholderTextColor="#777777"
@@ -68,10 +68,13 @@ const Login = () => {
         <View style={styles.more}>
           <Text style={styles.Text}>Đã có tài khoản?</Text>
           <TouchableOpacity>
-            <Text style={{...styles.Text, color: '#EF7749'}}> Đăng kí ngay</Text>
+            <Text style={{...styles.Text, color: '#EF7749'}}>
+              {' '}
+              Đăng kí ngay
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={{...styles.Text, marginLeft:14}}>  Quên mật khẩu</Text>
+            <Text style={{...styles.Text, marginLeft: 14}}> Quên mật khẩu?</Text>
           </TouchableOpacity>
         </View>
       </View>

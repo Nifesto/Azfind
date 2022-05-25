@@ -1,5 +1,14 @@
 const Images = {
   //icon
+  iconProfile: require('./icons/iconProfile.png'),
+  iconCopy: require('./icons/iconCopy.png'),
+  iconPaper: require('./icons/iconPaper.png'),
+  iconDone: require('./icons/iconDone.png'),
+  iconWait: require('./icons/iconWait.png'),
+  iconMoney: require('./icons/iconMoney.png'),
+  iconSwitch: require('./icons/iconSwitch.png'),
+  iconMore: require('./icons/iconMore.png'),
+  iconLoginBy: require('./icons/iconLoginBy.png'),
   iconBack: require('./icons/iconBack.png'),
   iconDraw: require('./icons/iconDraw.png'),
   iconDropUp: require('./icons/iconDropUp.png'),
@@ -33,14 +42,28 @@ const Images = {
   iconNews: require('./icons/iconNews.png'),
   iconStar: require('./icons/iconStar.png'),
   iconClose: require('./icons/iconClose.png'),
+  iconClose_1: require('./icons/iconClose_1.png'),
   iconTriangleDown: require('./icons/iconTriangleDown.png'),
   iconTriangleLeft: require('./icons/iconTriangleLeft.png'),
   iconTriangleRight: require('./icons/iconTriangleRight.png'),
   iconHeartRed: require('./icons/iconHeartRed.png'),
   iconHeart: require('./icons/iconHeart.png'),
   iconLogo: require('./icons/logo.png'),
+  iconCheck: require('./icons/iconCheck.png'),
+  iconChecked: require('./icons/iconChecked.png'),
   //Images
   posterHome: require('./images/posterHome.png'),
- 
+
+  iconCircle: require('./icons/iconCircle.png'),
+  iconTakePhoto: require('./icons/iconTakePhoto.png'),
+  iconSuccess: require('./icons/iconSuccess.png'),
+  iconCompeleted: require('./icons/iconCompeleted.png'),
+  iconChoice: require('./icons/iconChoice.png'),
+  iconHuman: require('./icons/iconHuman.png'),
+  iconCMND: require('./icons/iconCMND.png'),
+  iconDropRight: require('./icons/iconDropRight.png'),
+  //Images
+  posterHome: require('./images/posterHome.png'),
+  logo: require('./icons/logo.png'),
 };
 export default Images;

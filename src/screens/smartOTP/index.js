@@ -2,8 +2,8 @@ import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Images from '../../assets';
-import Header from '../../component/header';
-const KeyOpen = () => {
+import HeaderOTP from '../../component/headerOTP';
+const KeyOpen = ({navigation}) => {
   const [code, setCode] = React.useState('');
   const [board, setBoard] = useState([
     {
@@ -69,7 +69,10 @@ const KeyOpen = () => {
   console.log(code);
   return (
     <View style={styles.container}>
-      <Header title="Nhập mã mở khóa Smart otp" />
+      <HeaderOTP
+        title="NHẬP MÃ MỞ KHÓA SMART OTP"
+        btnLeft={() => navigation.goBack()}
+      />
       <View style={styles.contain}>
         <Image source={Images.logo} resizeMode="contain" style={styles.logo} />
         <View style={styles.input_container}>
@@ -98,7 +101,7 @@ const KeyOpen = () => {
                   onPress={() => print(item)}>
                   <View style={{backgroundColor: '#DBDBDB', borderRadius: 25}}>
                     <Image
-                      source={Images.iconClose}
+                      source={Images.iconClose_1}
                       resizeMode="contain"
                       style={styles.x}
                     />
@@ -117,9 +120,12 @@ const KeyOpen = () => {
             }
           })}
         </View>
-
         {!!code && code.length > 3 && (
-          <TouchableOpacity style={styles.confirm}>
+          <TouchableOpacity
+            style={styles.confirm}
+            onPress={() => {
+              navigation.navigate('CodeOTP');
+            }}>
             <Text style={styles.txtCf}>XÁC NHẬN</Text>
           </TouchableOpacity>
         )}

@@ -20,25 +20,9 @@ const Item = props => {
   );
 };
 const Home = ({navigation}) => {
-  const {t} = i18n;
   const dispatch = useDispatch();
   const [visible, setVisible] = React.useState(false);
-  const language = useSelector(state => state.language.language);
-  console.log('cvchonayu', language);
-  // React.useEffect(() => {
-  //   getlang();
-  // }, [language]);
-  // const getlang = async () => {
-  //   const lang = await AsyncStorage.getItem(ASYN.LANGUAGE);
-  //   console.log('lang', lang);
-  //   if (lang === 'en') {
-  //     i18n.locale = 'en';
-  //     dispatch(changeLanguage('en'));
-  //   } else {
-  //     i18n.locale = 'vi';
-  //     dispatch(changeLanguage('vi'));
-  //   }
-  // };
+
   const [data] = React.useState([
     {
       name: 'FPTFPT',
@@ -115,7 +99,7 @@ const Home = ({navigation}) => {
     return (
       <>
         <Image source={Images.posterHome} style={styles.poster} />
-        <Text style={{alignSelf: 'center'}}>{i18n.t('home')}</Text>
+        <Text>{i18n.t('home')}</Text>
         <View style={styles.bar}>
           <Item
             src={Images.iconHand}
@@ -255,7 +239,10 @@ const Home = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <HeaderHome onPressDraw={() => setVisible(true)} />
+      <HeaderHome
+        onPressDraw={() => setVisible(true)}
+        onPressUser={() => navigation.navigate('Profile')}
+      />
       <View style={{flex: 1, paddingBottom: WIDTH * 70}}>
         <FlatList
           data={data}

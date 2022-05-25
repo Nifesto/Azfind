@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: '#F1F1F1',
-    height: WIDTH * 33,
     alignItems: 'center',
     marginTop: WIDTH * 9,
-    paddingHorizontal: WIDTH * 4,
+    paddingHorizontal: WIDTH * 16,
     borderRadius: 5,
+    paddingVertical: WIDTH * 9,
   },
   text_1: {
     color: '#0E448A',

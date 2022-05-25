@@ -3,13 +3,18 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Images from '../../assets';
 import styles from './style';
 import Form from './form';
-const Profile = () => {
+import {WIDTH} from '../../base/core';
+import i18n from 'i18n-js';
+import {useDispatch} from 'react-redux';
+import {changeLanguage} from '../../redux/reducer/reducerLanguage';
+const Profile = ({navigation}) => {
+  const [lang, setLang] = React.useState('');
+  const {t} = i18n;
+  const dispatch = useDispatch();
   const [check, setCheck] = React.useState(false);
   const [check1, setCheck1] = React.useState(false);
   const [check2, setCheck2] = React.useState(false);
   const [check3, setCheck3] = React.useState(false);
-  const [check4, setCheck4] = React.useState(false);
-  const [check5, setCheck5] = React.useState(false);
   const [check6, setCheck6] = React.useState(false);
   const showPrf = () => {
     setCheck(!check);
@@ -26,16 +31,21 @@ const Profile = () => {
   const showLoginBy = () => {
     setCheck3(!check3);
   };
-  const chooseLangVN = () => {
-    setCheck4(!check4);
+  const changeLanguageToVN = () => {
+    setLang('vi');
+    i18n.locale = 'vi';
+    dispatch(changeLanguage('vi'));
   };
-  const chooseLangUK = () => {
-    setCheck5(!check5);
+  const changeLanguageToEnglish = () => {
+    setLang('en');
+    i18n.locale = 'en';
+    dispatch(changeLanguage('en'));
   };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image style={styles.icon_header} source={Images.iconBack} />
         </TouchableOpacity>
         <Image style={styles.icon_header} source={Images.iconProfile} />
@@ -52,7 +62,7 @@ const Profile = () => {
       </View>
       <View style={styles.body}>
         <View style={styles.form}>
-          <Form source={Images.iconProfile} title={'Thông tin cá nhân'} />
+          <Form source={Images.iconProfile} title={t('infoUser')} />
           <TouchableOpacity style={styles.btnShow} onPress={check => showPrf()}>
             {check == true ? (
               <Image source={Images.iconDropdown} style={styles.iconDropUp} />
@@ -67,7 +77,9 @@ const Profile = () => {
               <Text style={styles.content}>danh sách tài khoản</Text>
               <View style={styles.acc_extra}>
                 <Text style={styles.text1}>Tích sản hưu trí - 0337577469</Text>
-                <TouchableOpacity style={styles.touch} onPress={check6 => showAsset()}>
+                <TouchableOpacity
+                  style={styles.touch}
+                  onPress={() => showAsset()}>
                   {check6 === true ? (
                     <Image
                       source={Images.iconDropUp}
@@ -115,7 +127,7 @@ const Profile = () => {
           </View>
         ) : null}
         <View style={styles.form}>
-          <Form source={Images.iconSetting} title={'Cài đặt'} />
+          <Form source={Images.iconSetting} title={t('setting')} />
           <TouchableOpacity
             onPress={check1 => showSetting()}
             style={styles.btnShow}>
@@ -129,40 +141,18 @@ const Profile = () => {
         {check1 == true ? (
           <View style={styles.show}>
             <Text style={styles.language}> Ngôn ngữ</Text>
-            <TouchableOpacity onPress={check4 => chooseLangVN()}>
-              {check4 === true ? (
-                <View
-                  style={{...styles.icon_languages, ...styles.icon_lang_extra}}>
-                  <Image style={styles.icon_language} source={Images.iconVN} />
-                </View>
-              ) : (
-                <View style={styles.icon_languages}>
-                  <Image style={styles.icon_language} source={Images.iconVN} />
-                </View>
-              )}
+            <TouchableOpacity onPress={changeLanguageToVN}>
+              <Image style={styles.icon_language} source={Images.iconVN} />
             </TouchableOpacity>
-            <TouchableOpacity onPress={check5 => chooseLangUK()}>
-              {check5 === true ? (
-                <View
-                  style={{...styles.icon_languages, ...styles.icon_lang_extra}}>
-                  <Image
-                    style={styles.icon_language}
-                    source={Images.iconEnglish}
-                  />
-                </View>
-              ) : (
-                <View style={styles.icon_languages}>
-                  <Image
-                    style={styles.icon_language}
-                    source={Images.iconEnglish}
-                  />
-                </View>
-              )}
+            <TouchableOpacity
+              onPress={changeLanguageToEnglish}
+              style={{marginLeft: WIDTH * 12}}>
+              <Image style={styles.icon_language} source={Images.iconEnglish} />
             </TouchableOpacity>
           </View>
         ) : null}
         <View style={styles.form}>
-          <Form source={Images.iconKey} title={'Đổi mật khẩu'} />
+          <Form source={Images.iconKey} title={t('changePassword')} />
           <TouchableOpacity
             onPress={check2 => showChangePass()}
             style={styles.btnShow}>
@@ -174,10 +164,7 @@ const Profile = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.form}>
-          <Form
-            source={Images.iconLoginBy}
-            title={'Đăng nhập bằng Face/ Touch ID'}
-          />
+          <Form source={Images.iconLoginBy} title={t('loginWithFace')} />
           <TouchableOpacity
             onPress={check3 => showLoginBy()}
             style={styles.btnShow}>
@@ -199,7 +186,7 @@ const Profile = () => {
         ) : null}
         <View style={styles.form}>
           <TouchableOpacity>
-            <Form source={Images.iconLogOut} title={'Đăng xuất'} />
+            <Form source={Images.iconLogOut} title={t('logOut')} />
           </TouchableOpacity>
         </View>
       </View>

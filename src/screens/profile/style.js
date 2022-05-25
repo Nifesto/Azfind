@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: FONTSIZE.f_12,
-    color: '#222',
+    color: COLOR.BLACK_P,
   },
   text: {
     fontSize: FONTSIZE.f_12,
@@ -87,11 +87,12 @@ const styles = StyleSheet.create({
   },
   text1: {
     fontSize: FONTSIZE.f_12,
-    color: '#222',
+    color: COLOR.BLACK_P,
   },
   language: {
     fontSize: FONTSIZE.f_11,
-    color: '#222',
+    fontFamily: FONT_FAMILY.regular,
+    color: COLOR.BLACK_P,
     flex: 1,
   },
   icon_language: {

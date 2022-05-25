@@ -12,6 +12,8 @@ import TabBarCustom from './tabbarCustom';
 import Images from '../assets';
 import SplashScreen from 'react-native-splash-screen';
 import PlanProperty from '../screens/planProperty';
+import CameraScreen from '../screens/testCamera';
+import ShowImageID from '../screens/showImageID.js';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -97,6 +99,16 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name="PlanProperty"
           component={PlanProperty}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="CameraScreen"
+          component={CameraScreen}
+        />
+         <Stack.Screen
+          options={{headerShown: false}}
+          name="ShowImageID"
+          component={ShowImageID}
         />
       </Stack.Navigator>
     </NavigationContainer>

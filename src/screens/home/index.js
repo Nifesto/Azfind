@@ -8,13 +8,13 @@ import Drawer from '../../navigation/drawer';
 import {COLOR, WIDTH} from '../../base/core';
 const Item = props => {
   return (
-    <TouchableOpacity style={styles.item}>
+    <TouchableOpacity style={styles.item} onPress={props.onPress}>
       <Image source={props.src} style={styles.iconBar} />
       <Text style={styles.txtBar}>{props.content}</Text>
     </TouchableOpacity>
   );
 };
-const Home = () => {
+const Home = ({navigation}) => {
   const [visible, setVisible] = React.useState(false);
   const [data] = React.useState([
     {
@@ -93,7 +93,11 @@ const Home = () => {
       <>
         <Image source={Images.posterHome} style={styles.poster} />
         <View style={styles.bar}>
-          <Item src={Images.iconHand} content={'Kế hoạch\ntích sản'} />
+          <Item
+            src={Images.iconHand}
+            content={'Kế hoạch\ntích sản'}
+            onPress={() => navigation.navigate('CameraScreen')}
+          />
           <Item src={Images.iconHat} content={'Học tập'} />
           <Item src={Images.iconChangeMoney} content={'Nộp/\nRútTiền'} />
           <Item src={Images.iconNews} content={'Tin trong\nngày'} />

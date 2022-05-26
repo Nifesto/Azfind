@@ -11,6 +11,7 @@ import ForChild from './forChild';
 import styles from './styles';
 import Hander from './formInput';
 import Header from './../../component/header/index';
+import i18n from '../../translate/i18n';
 
 const Form = ({navigation}) => {
   const [visibleOne, setVisibleOne] = React.useState(false);
@@ -144,19 +145,22 @@ const Form = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <Header title="KẾ HOẠCH TÍCH SẢN" btnLeft={() => navigation.goBack()} />
+      <Header
+        title={i18n.t('wealthPlan')}
+        btnLeft={() => navigation.goBack()}
+      />
       <ScrollView>
         <TouchableOpacity
           onPress={() => {
             setVisibleOne(!visibleOne);
           }}>
-          <ForChild name={'TÍCH SẢN CHO CON'} />
+          <ForChild name={i18n.t('assetsForChildren')} />
         </TouchableOpacity>
         {visibleOne && (
           <Hander
-            placeholderMoney={'Số tiền mục tiêu'}
-            placeHoldeAgeStart={'Tuổi bắt đầu'}
-            placeHoldeAgeEnd={'Tuổi kết thúc'}
+            placeholderMoney={i18n.t('targetAmount')}
+            placeHoldeAgeStart={i18n.t('startingAge')}
+            placeHoldeAgeEnd={i18n.t('endAge')}
             onChangeTextMoney={onChangeMoneyChild}
             onChangeTextAgeStart={onChangeAgeStartChild}
             onChangeTextAgeEnd={onChangeAgeEndChild}
@@ -170,13 +174,13 @@ const Form = ({navigation}) => {
           onPress={() => {
             setVisibleTwo(!visibleTwo);
           }}>
-          <ForChild name={'TÍCH SẢN CHO HƯU TRÍ'} />
+          <ForChild name={i18n.t('retirement_Assets')} />
         </TouchableOpacity>
         {visibleTwo && (
           <Hander
-            placeholderMoney={'Chi tiêu khi nghỉ hưu/tháng'}
-            placeHoldeAgeStart={'Tuổi hiện tại'}
-            placeHoldeAgeEnd={'Tuổi nghỉ hưu'}
+            placeholderMoney={i18n.t('SpendingInRetirement_Month')}
+            placeHoldeAgeStart={i18n.t('CurrentAge')}
+            placeHoldeAgeEnd={i18n.t('RetiredAge')}
             onChangeTextMoney={onChangeMoneyRetire}
             onChangeTextAgeStart={onChangeAgeStartRetire}
             onChangeTextAgeEnd={onChangeAgeEndRetire}
@@ -190,7 +194,7 @@ const Form = ({navigation}) => {
           onPress={() => {
             setVisibleThree(!visibleThree);
           }}>
-          <ForChild name={'TÍCH SẢN MUA NHÀ/OTO'} />
+          <ForChild name={i18n.t('SavingToBuyACarAndAHouse')} />
         </TouchableOpacity>
         {visibleThree && (
           <Hander
@@ -200,9 +204,9 @@ const Form = ({navigation}) => {
             onChangeTextMoneyStart={onChangeMoneyStartHome}
             onChangeTextInflationary={onChangeMoneyDecreaseHome}
             onChangeTextMoneyReal={onChangeMoneyRealHome}
-            placeholderMoney={'Số tiền mục tiêu'}
-            placeHoldeAgeStart={'Tuổi bắt đầu'}
-            placeHoldeAgeEnd={'Tuổi kết thúc'}
+            placeholderMoney={i18n.t('targetAmount')}
+            placeHoldeAgeStart={i18n.t('startingAge')}
+            placeHoldeAgeEnd={i18n.t('endAge')}
             onPress={log_2}
           />
         )}

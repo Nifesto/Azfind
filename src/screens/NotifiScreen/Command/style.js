@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     color: '#222',
   },
   flt: {
-    paddingHorizontal: WIDTH * 18,
+    paddingHorizontal: WIDTH * 16,
     flexDirection: 'row',
     paddingVertical: WIDTH * 5,
     marginBottom: WIDTH * 3,

@@ -57,7 +57,7 @@ const Notification = () => {
                   alignItems: 'center',
                   justifyContent:'center',
                   width:(WIDTH_WINDOW-WIDTH*32)/3,
-                  paddingVertical:WIDTH*8
+                  paddingVertical:WIDTH*8 
                 }}>
                 <Text
                   style={{

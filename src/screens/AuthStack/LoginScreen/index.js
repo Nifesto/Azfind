@@ -2,7 +2,9 @@ import React from 'react';
 import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import styles from './style';
 import Images from '../../../assets';
-const Login = () => {
+import {WIDTH} from '../../../base/core';
+import {useNavigation} from '@react-navigation/native';
+const Login = ({navigation}) => {
   const [number, onChangeNumber] = React.useState('');
   const [check, setCheck] = React.useState(true);
   const [pass, setPass] = React.useState('');
@@ -60,21 +62,22 @@ const Login = () => {
           <Text style={styles.TextRemember}>Nhớ mật khẩu</Text>
         </View>
         <View style={styles.Sign}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity onPress={() =>navigation.navigate('TabScreen')} style={styles.button}>
             <Text style={styles.TextInput}>SIGN IN</Text>
           </TouchableOpacity>
-          <Image style={styles.iconFace} source={Images.iconFaceID} />
+          <TouchableOpacity>
+            <Image style={styles.iconFace} source={Images.iconFaceID} />
+          </TouchableOpacity>
         </View>
         <View style={styles.more}>
-          <Text style={styles.Text}>Đã có tài khoản?</Text>
-          <TouchableOpacity>
-            <Text style={{...styles.Text, color: '#EF7749'}}>
-              {' '}
-              Đăng kí ngay
-            </Text>
+          <Text style={styles.Text}>Đã chưa có tài khoản?</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+            <Text style={{...styles.Text, color: '#EF7749'}}>Đăng kí ngay</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={{...styles.Text, marginLeft: 14}}> Quên mật khẩu?</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('ForgetPass')}>
+            <Text style={{...styles.Text, marginLeft: WIDTH * 14}}>
+              Quên mật khẩu?
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -3,12 +3,12 @@ import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import styles from './style';
 import Images from '../../../assets';
 import {COLOR, WIDTH} from '../../../../base/core';
-const Register = () => {
+const Register = ( {navigation}) => {
   const [number, onChangeNumber] = React.useState('');
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.goBack()}>
           <Image style={styles.iconBack} source={Images.iconBack} />
         </TouchableOpacity>
         <Text style={styles.title}>ĐĂNG KÍ</Text>
@@ -28,7 +28,7 @@ const Register = () => {
       </TouchableOpacity>
       <View style={styles.more}>
         <Text style={styles.Text}>Đã có tài khoản?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate('Login')}>
           <Text style={{...styles.Text, color: '#EF7749'}}> Đăng nhập</Text>
         </TouchableOpacity>
       </View>

@@ -16,21 +16,7 @@ const Profile = ({navigation}) => {
   const [check2, setCheck2] = React.useState(false);
   const [check3, setCheck3] = React.useState(false);
   const [check6, setCheck6] = React.useState(false);
-  const showPrf = () => {
-    setCheck(!check);
-  };
-  const showAsset = () => {
-    setCheck6(!check6);
-  };
-  const showSetting = () => {
-    setCheck1(!check1);
-  };
-  const showChangePass = () => {
-    setCheck2(!check2);
-  };
-  const showLoginBy = () => {
-    setCheck3(!check3);
-  };
+
   const changeLanguageToVN = () => {
     setLang('vi');
     i18n.locale = 'vi';
@@ -63,15 +49,16 @@ const Profile = ({navigation}) => {
       <View style={styles.body}>
         <View style={styles.form}>
           <Form source={Images.iconProfile} title={t('infoUser')} />
-          <TouchableOpacity style={styles.btnShow} onPress={check => showPrf()}>
-            {check == true ? (
-              <Image source={Images.iconDropdown} style={styles.iconDropUp} />
-            ) : (
-              <Image source={Images.iconDropUp} style={styles.iconDropUp} />
-            )}
+          <TouchableOpacity
+            style={styles.btnShow}
+            onPress={() => setCheck(!check)}>
+            <Image
+              source={check ? Images.iconDropUp : Images.iconDropdown}
+              style={styles.iconDropUp}
+            />
           </TouchableOpacity>
         </View>
-        {check == true ? (
+        {check && (
           <View style={styles.information}>
             <View style={styles.infor}>
               <Text style={styles.content}>danh sách tài khoản</Text>
@@ -79,18 +66,11 @@ const Profile = ({navigation}) => {
                 <Text style={styles.text1}>Tích sản hưu trí - 0337577469</Text>
                 <TouchableOpacity
                   style={styles.touch}
-                  onPress={() => showAsset()}>
-                  {check6 === true ? (
-                    <Image
-                      source={Images.iconDropUp}
-                      style={styles.iconDropUp_sm}
-                    />
-                  ) : (
-                    <Image
-                      source={Images.iconDropdown}
-                      style={styles.iconDropUp_sm}
-                    />
-                  )}
+                  onPress={() => setCheck6(!check6)}>
+                  <Image
+                    source={check6 ? Images.iconDropUp : Images.iconDropdown}
+                    style={styles.iconDropUp_sm}
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -125,20 +105,19 @@ const Profile = ({navigation}) => {
               </Text>
             </View>
           </View>
-        ) : null}
+        )}
         <View style={styles.form}>
           <Form source={Images.iconSetting} title={t('setting')} />
           <TouchableOpacity
-            onPress={check1 => showSetting()}
+            onPress={() => setCheck1(!check1)}
             style={styles.btnShow}>
-            {check1 == true ? (
-              <Image source={Images.iconDropdown} style={styles.iconDropUp} />
-            ) : (
-              <Image source={Images.iconDropUp} style={styles.iconDropUp} />
-            )}
+            <Image
+              source={!check1 ? Images.iconDropdown : Images.iconDropUp}
+              style={styles.iconDropUp}
+            />
           </TouchableOpacity>
         </View>
-        {check1 == true ? (
+        {check1 && (
           <View style={styles.show}>
             <Text style={styles.language}> Ngôn ngữ</Text>
             <TouchableOpacity onPress={changeLanguageToVN}>
@@ -150,32 +129,30 @@ const Profile = ({navigation}) => {
               <Image style={styles.icon_language} source={Images.iconEnglish} />
             </TouchableOpacity>
           </View>
-        ) : null}
+        )}
         <View style={styles.form}>
           <Form source={Images.iconKey} title={t('changePassword')} />
           <TouchableOpacity
-            onPress={check2 => showChangePass()}
+            onPress={() => setCheck2(!check2)}
             style={styles.btnShow}>
-            {check2 == true ? (
-              <Image source={Images.iconDropdown} style={styles.iconDropUp} />
-            ) : (
-              <Image source={Images.iconDropUp} style={styles.iconDropUp} />
-            )}
+            <Image
+              source={!check2 ? Images.iconDropdown : Images.iconDropUp}
+              style={styles.iconDropUp}
+            />
           </TouchableOpacity>
         </View>
         <View style={styles.form}>
           <Form source={Images.iconLoginBy} title={t('loginWithFace')} />
           <TouchableOpacity
-            onPress={check3 => showLoginBy()}
+            onPress={() => setCheck3(!check3)}
             style={styles.btnShow}>
-            {check3 == true ? (
-              <Image source={Images.iconDropdown} style={styles.iconDropUp} />
-            ) : (
-              <Image source={Images.iconDropUp} style={styles.iconDropUp} />
-            )}
+            <Image
+              source={!check3 ? Images.iconDropdown : Images.iconDropUp}
+              style={styles.iconDropUp}
+            />
           </TouchableOpacity>
         </View>
-        {check3 == true ? (
+        {check3 && (
           <View style={styles.show}>
             <Text style={styles.language}>Đăng nhập bằng Face/ Touch ID</Text>
 
@@ -183,7 +160,7 @@ const Profile = ({navigation}) => {
               <Image style={styles.icon_language} source={Images.iconSwitch} />
             </TouchableOpacity>
           </View>
-        ) : null}
+        )}
         <View style={styles.form}>
           <TouchableOpacity>
             <Form source={Images.iconLogOut} title={t('logOut')} />

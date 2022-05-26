@@ -26,6 +26,8 @@ import {ASYN} from '../base/core';
 import i18n from '../translate/i18n';
 import {changeLanguage} from '../redux/reducer/reducerLanguage';
 import Profile from '../screens/profile';
+import PropertyTab from '../screens/property/propertyTab';
+import CategoryTab from '../screens/property/categoryTab';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -165,6 +167,16 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name="Profile"
           component={Profile}
+        />
+         <Stack.Screen
+          options={{headerShown: false}}
+          name="PropertyTab"
+          component={PropertyTab}
+        />
+         <Stack.Screen
+          options={{headerShown: false}}
+          name="CategoryTab"
+          component={CategoryTab}
         />
       </Stack.Navigator>
     </NavigationContainer>

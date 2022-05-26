@@ -51,6 +51,8 @@ const Images = {
   iconLogo: require('./icons/logo.png'),
   iconCheck: require('./icons/iconCheck.png'),
   iconChecked: require('./icons/iconChecked.png'),
+  iconNext: require('./icons/iconNext.png'),
+  iconInfo: require('./icons/iconInfo.png'),
   //Images
   posterHome: require('./images/posterHome.png'),
 
@@ -62,8 +64,6 @@ const Images = {
   iconHuman: require('./icons/iconHuman.png'),
   iconCMND: require('./icons/iconCMND.png'),
   iconDropRight: require('./icons/iconDropRight.png'),
-  //Images
-  posterHome: require('./images/posterHome.png'),
   logo: require('./icons/logo.png'),
 };
 export default Images;

@@ -14,6 +14,7 @@ import styles from './styles';
 import InfoAcc from './infoAcc/index';
 import Images from './../../assets/index';
 import Header from '../../component/header';
+import i18n from '../../translate/i18n';
 const OpenAccount = ({navigation}) => {
   const [count, setCount] = React.useState(0);
   const onPress = () => setCount(prevCount => prevCount + 1);
@@ -22,17 +23,17 @@ const OpenAccount = ({navigation}) => {
   const [render, setRendrer] = useState([
     {
       id: 1,
-      name: 'Nam',
+      name: i18n.t('male'),
       choose: false,
     },
     {
       id: 2,
-      name: 'Nữ',
+      name: i18n.t('female'),
       choose: false,
     },
     {
       id: 3,
-      name: 'Khác',
+      name: i18n.t('other'),
       choose: false,
     },
   ]);
@@ -53,26 +54,29 @@ const OpenAccount = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <Header title="MỞ TÀI KHOẢN" btnLeft={() => navigation.goBack()} />
+      <Header
+        title={i18n.t('openAccount')}
+        btnLeft={() => navigation.goBack()}
+      />
       <ScrollView>
-        <InfoAcc title={'Số điện thoại'} />
+        <InfoAcc title={i18n.t('phoneNumber')} />
         <InfoAcc title={'Email'} />
-        <InfoAcc title={'Số CMND/ CCCD'} />
+        <InfoAcc title={i18n.t('identificationCard')} />
         <View style={styles.info}>
           <Text style={styles.title}>
-            Họ và tên <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('fullName')} <Text style={{color: 'red'}}>*</Text>
           </Text>
           <Text style={styles.title_2}>Nguyễn Văn A</Text>
         </View>
         <View style={styles.info_1}>
           <Text style={styles.title}>
-            Ngày sinh <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('dateOfBirth')} <Text style={{color: 'red'}}>*</Text>
           </Text>
           <Text style={styles.title_2}>06/08/1968</Text>
         </View>
         <View style={styles.info}>
           <Text style={styles.title_1}>
-            Địa chỉ thường trú <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('permanentAddress')} <Text style={{color: 'red'}}>*</Text>
           </Text>
           <TextInput
             multiline={true}
@@ -85,7 +89,8 @@ const OpenAccount = ({navigation}) => {
         </View>
         <View style={styles.info}>
           <Text style={styles.title}>
-            Địa chỉ liên lạc <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('contactAddress')}
+            <Text style={{color: 'red'}}>*</Text>
           </Text>
           <TextInput
             multiline={true}
@@ -98,13 +103,9 @@ const OpenAccount = ({navigation}) => {
         </View>
         <View style={styles.info}>
           <Text style={styles.title}>
-            Giới tính <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('gender')} <Text style={{color: 'red'}}>*</Text>
           </Text>
           <View style={styles.render}>
-            {/* <View style={{flexDirection: 'row'}}>
-              <TouchableOpacity style={styles.box} />
-              <Text style={styles.title}>Nam</Text>
-            </View> */}
             {render.map((item, index) => {
               return (
                 <View style={{flexDirection: 'row'}} key={item.id}>
@@ -131,13 +132,15 @@ const OpenAccount = ({navigation}) => {
         </View>
         <View style={styles.info}>
           <Text style={styles.title}>
-            Ngày cấp <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('dateOfIssue')}
+            <Text style={{color: 'red'}}>*</Text>
           </Text>
           <Text style={styles.title_2}>06/08/2021</Text>
         </View>
         <View style={styles.info}>
           <Text style={styles.title}>
-            Nơi cấp <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('placeOfIssue')}
+            <Text style={{color: 'red'}}>*</Text>
           </Text>
           <TextInput
             multiline={true}
@@ -150,10 +153,12 @@ const OpenAccount = ({navigation}) => {
         </View>
         <View style={styles.info}>
           <Text style={styles.title}>
-            Xác thực khuôn mặt <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('faceAuthentication')} <Text style={{color: 'red'}}>*</Text>
           </Text>
           <View style={styles.sucess}>
-            <Text style={{...styles.title, color: '#fff'}}>Thành công </Text>
+            <Text style={{...styles.title, color: '#fff'}}>
+              {i18n.t('success')}
+            </Text>
             <Text style={{...styles.title, color: '#fff'}}>(90%)</Text>
           </View>
         </View>
@@ -178,7 +183,8 @@ const OpenAccount = ({navigation}) => {
             }}
           />
         </View>
-        <Text style={styles.title_3}>ĐĂNG KÍ DỊCH VỤ</Text>
+        <Line />
+        <Text style={styles.title_3}> {i18n.t('registerService')}</Text>
 
         <View style={styles.registration}>
           <TouchableOpacity
@@ -193,10 +199,16 @@ const OpenAccount = ({navigation}) => {
               style={styles.a}
             />
           </TouchableOpacity>
-          <Text style={styles.title}>Đăng ký dịch vụ giao dịch ký quỹ</Text>
+          <Text style={styles.title}>
+            {' '}
+            {i18n.t('SignUpForMarginTradingService')}
+          </Text>
         </View>
         <Line />
-        <Text style={styles.title_3}>THÔNG TIN TÀI KHOẢN NGÂN HÀNG</Text>
+        <Text style={styles.title_3}>
+          {' '}
+          {i18n.t('informationOfBankIsAccount')}
+        </Text>
         <View
           style={{
             ...styles.info,
@@ -208,7 +220,7 @@ const OpenAccount = ({navigation}) => {
               ...styles.title,
               marginRight: 20,
             }}>
-            Họ và tên <Text style={{color: 'red'}}>*</Text>
+            {i18n.t('fullName')} <Text style={{color: 'red'}}>*</Text>
           </Text>
           <Text style={styles.title}>Nguyễn Văn A</Text>
         </View>
@@ -217,7 +229,7 @@ const OpenAccount = ({navigation}) => {
             ...styles.title,
             marginHorizontal: (windowWidth * 16) / 428,
           }}>
-          Ngân hàng <Text style={{color: 'red'}}>*</Text>
+          {i18n.t('bank')} <Text style={{color: 'red'}}>*</Text>
         </Text>
         <View style={styles.bank}>
           <Text style={{...styles.title, fontSize: 18}}>
@@ -232,7 +244,10 @@ const OpenAccount = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.bank}>
-          <Text style={{...styles.title, fontSize: 18}}>Chi nhánh</Text>
+          <Text style={{...styles.title, fontSize: 18}}>
+            {' '}
+            {i18n.t('branch')}
+          </Text>
 
           <TouchableOpacity>
             <Image
@@ -242,21 +257,21 @@ const OpenAccount = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
-        <InfoAcc title={'Số TK ngân hàng'} />
+        <InfoAcc title={i18n.t('bankAccountNumber')} />
         <Line />
-        <Text style={styles.title_3}>NHÂN VIÊN MÔI GIỚI</Text>
-        <InfoAcc title={'Mã nhân viên môi giới'} />
-        <InfoAcc title={'Tên nhân viên môi giới'} />
+        <Text style={styles.title_3}>{i18n.t('broker')}</Text>
+        <InfoAcc title={i18n.t('brokerCode')} />
+        <InfoAcc title={i18n.t('brokerName')} />
         <Line />
-        <Text style={styles.title_3}>CỘNG TÁC VIÊN</Text>
-        <InfoAcc title={'Mã cộng tác viên'} />
-        <InfoAcc title={'Tên cộng tác viên'} />
+        <Text style={styles.title_3}>{i18n.t('collaborators')}</Text>
+        <InfoAcc title={i18n.t('collaboratorCode')} />
+        <InfoAcc title={i18n.t('collaboratorIsName')} />
         <Line />
         <Text style={styles.title_3}>
-          THÔNG TIN NGƯỜI GIỚI THIỆU (TÙY CHỌN)
+          {i18n.t('referralInformationoptional')}
         </Text>
-        <InfoAcc title={'Mã người giới thiệu'} />
-        <InfoAcc title={'Tên người giới thiệu'} />
+        <InfoAcc title={i18n.t('referralCode')} />
+        <InfoAcc title={i18n.t('referrerIsName')} />
         <View style={styles.commit}>
           <TouchableOpacity
             onPress={onPress}
@@ -271,14 +286,13 @@ const OpenAccount = ({navigation}) => {
             />
           </TouchableOpacity>
           <Text style={{...styles.title, flex: 1}}>
-            Tôi xin cam kết chịu trách nhiệm về mọi thông tin đã khai báo và xác
-            nhận việc đăng ký mở tài khoản giao dịch chứng khoán.
-            <Text style={{color: 'red'}}>Chi tiết hợp đồng</Text>
+            {i18n.t('rules')}
+            <Text style={{color: 'red'}}> {i18n.t('detail')}</Text>
           </Text>
         </View>
         <View style={{alignItems: 'center'}}>
           <TouchableOpacity style={styles.button}>
-            <Text style={styles.submit}>ĐĂNG KÝ</Text>
+            <Text style={styles.submit}>{i18n.t('registration')}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

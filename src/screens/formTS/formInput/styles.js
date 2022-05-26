@@ -15,21 +15,16 @@ const styles = StyleSheet.create({
     width: WIDTH * 12,
     height: WIDTH * 7,
   },
-  // box: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   justifyContent: 'space-between',
-  //   width: 40,
-  // },
 
   input_2: {
+    paddingVertical: 0,
     color: '#5178AA',
     borderWidth: 1,
     borderColor: '#0E448A',
     borderRadius: 5,
     marginTop: WIDTH * 7,
     fontSize: FONTSIZE.f_16,
-    height: WIDTH * 40,
+    height: WIDTH * 29,
     width: '45%',
     paddingHorizontal: WIDTH * 5,
   },
@@ -51,6 +46,7 @@ const styles = StyleSheet.create({
     width: WIDTH * 88,
     justifyContent: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
   },
   input: {
     flexDirection: 'row',
@@ -61,16 +57,15 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: WIDTH * 5,
     marginTop: WIDTH * 7,
-    paddingVertical:0,
-    height:WIDTH*29
-
+    paddingVertical: 0,
+    height: WIDTH * 29,
   },
   input_1: {
     color: '#5178AA',
     fontSize: FONTSIZE.f_15,
-    flex:1,
-    height:'100%',
-    padding:0
+    flex: 1,
+    height: '100%',
+    padding: 0,
   },
   form: {
     paddingHorizontal: WIDTH * 16,

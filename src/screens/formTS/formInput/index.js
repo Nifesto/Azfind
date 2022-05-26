@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
+import i18n from '../../../translate/i18n';
 const Hander = props => {
   const {
     placeholderMoney,
@@ -39,7 +40,7 @@ const Hander = props => {
           placeholderTextColor="#5178AA"
           numberOfLines={1}
         />
-        <Text style={styles.text_3}>đ/tháng</Text>
+        <Text style={styles.text_3}>{i18n.t('d_month')}</Text>
       </View>
       <View style={styles.age}>
         <TextInput
@@ -65,7 +66,7 @@ const Hander = props => {
           value={valueMoneyStart}
           onChangeText={onChangeTextMoneyStart}
           keyboardType="number-pad"
-          placeholder="Số tiền ban đầu"
+          placeholder={i18n.t('initialAmount')}
           style={styles.input_1}
           placeholderTextColor="#5178AA"
         />
@@ -76,25 +77,25 @@ const Hander = props => {
           value={valueInflationary}
           onChangeText={onChangeTextInflationary}
           keyboardType="number-pad"
-          placeholder="Lạm phát/Năm"
+          placeholder={i18n.t('inflationary_Year')}
           style={styles.input_1}
           placeholderTextColor="#5178AA"
         />
-        <Text style={styles.text_3}>%/năm</Text>
+        <Text style={styles.text_3}>{i18n.t('percent_year')}</Text>
       </View>
       <View style={styles.input}>
         <TextInput
           value={valueMoneyReal}
           onChangeText={onChangeTextMoneyReal}
           keyboardType="number-pad"
-          placeholder="Số tiền thực tế cần tích sản"
+          placeholder={i18n.t('actualAmountToAccumulate')}
           style={styles.input_1}
           placeholderTextColor="#5178AA"
         />
         <Text style={styles.text_3}>đ</Text>
       </View>
       <TouchableOpacity style={styles.btSet} onPress={onPress}>
-        <Text style={styles.setUp}>THIẾT LẬP</Text>
+        <Text style={styles.setUp}>{i18n.t('Setup')}</Text>
       </TouchableOpacity>
     </View>
   );

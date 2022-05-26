@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
+import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH, WIDTH_WINDOW} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -44,9 +44,17 @@ const styles = StyleSheet.create({
     right: 44,
     top: -3,
   },
+  body: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: WIDTH * 16,
+    width: WIDTH_WINDOW,
+    justifyContent: 'space-between',
+  },
   switch: {
     marginTop: WIDTH * 20,
-    marginBottom: WIDTH * 17,
+    marginBottom: WIDTH * 4,
     flexDirection: 'row',
     width: WIDTH * 296,
     height: WIDTH * 31,
@@ -56,68 +64,15 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginHorizontal: WIDTH * 66,
   },
-  payment: {
+  btn: {
     color: '#fff',
     fontSize: FONTSIZE.f_12,
     fontFamily: FONT_FAMILY.bold,
-    backgroundColor: '#45B9A4',
     width: WIDTH * 148,
     height: WIDTH * 31,
     borderRadius: WIDTH * 27,
-    paddingHorizontal: WIDTH * 42,
-    paddingVertical: WIDTH * 7,
-  },
-  change: {
-    color: '#fff',
-    fontSize: FONTSIZE.f_12,
-    fontFamily: FONT_FAMILY.bold,
-    backgroundColor: '#ED5B54',
-    width: WIDTH * 148,
-    height: WIDTH * 31,
-    borderRadius: WIDTH * 27,
-    paddingHorizontal: WIDTH * 34,
-    paddingVertical: WIDTH * 7,
-  },
-  body: {
-    paddingHorizontal: WIDTH * 18,
-  },
-  title: {
-    color: '#7A7A7A',
-    fontSize: FONTSIZE.f_12,
-    fontFamily: FONT_FAMILY.regular,
-    marginBottom: WIDTH * 5,
-  },
-  choose: {
-    flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: WIDTH * 10,
-    borderWidth: WIDTH * 1,
-    paddingVertical: WIDTH * 10,
-    justifyContent: 'space-between',
-    paddingLeft: WIDTH * 4,
-    paddingRight: WIDTH * 16,
-    marginBottom: WIDTH * 12,
-  },
-
-  iconDropdown: {
-    width: WIDTH * 12,
-    height: WIDTH * 7,
-  },
-  iconCopy: {
-    width: WIDTH * 23,
-    height: WIDTH * 23,
-    resizeMode: 'contain',
-  },
-  input: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: WIDTH * 10,
-    borderWidth: WIDTH * 1,
-    height: WIDTH *45,
-    justifyContent: 'space-between',
-    paddingLeft: WIDTH * 4,
-    paddingRight: WIDTH * 16,
-    marginBottom: WIDTH * 12,
+    paddingVertical: WIDTH * 7,
   },
 });
 export default styles;

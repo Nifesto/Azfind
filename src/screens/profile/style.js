@@ -100,11 +100,6 @@ const styles = StyleSheet.create({
     height: WIDTH * 24,
     resizeMode: 'contain',
   },
-  icon_lang_extra: {
-    borderWidth: WIDTH * 1,
-    borderColor: '#FFB600',
-    borderRadius: WIDTH * 50,
-  },
   icon_languages: {
     width: WIDTH * 28,
     height: WIDTH * 28,

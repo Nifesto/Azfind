@@ -26,6 +26,10 @@ import {ASYN} from '../base/core';
 import i18n from '../translate/i18n';
 import {changeLanguage} from '../redux/reducer/reducerLanguage';
 import Profile from '../screens/profile';
+import Login from '../screens/AuthStack/LoginScreen';
+import Register from '../screens/AuthStack/registerScreen';
+import ForgetPass from '../screens/AuthStack/forgetPassword';
+import ConfirmPass from '../screens/AuthStack/confirmPass';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -85,12 +89,39 @@ const TabScreen = () => {
   }, [language]);
   return <RenderItem />;
 };
-
+const AuthStack = () => {
+  return (
+    <Stack.Navigator headerMode={'none'}>
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Login"
+        component={Login}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Register"
+        component={Register}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ForgetPass"
+        component={ForgetPass}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ConfirmPass"
+        component={ConfirmPass}
+      />
+    </Stack.Navigator>
+  );
+};
 // const AuthStack = () => {
 //   return <Stack.Navigator headerMode={'none'}></Stack.Navigator>;
 // };
 
 const AppNavigation = () => {
+  let userCheck = false;
+
   const [lang, setLang] = React.useState('vi');
   const dispatch = useDispatch();
   const language = useSelector(state => state.language.language);
@@ -117,56 +148,71 @@ const AppNavigation = () => {
   React.useEffect(() => {
     _CheckDataAccount();
   }, []);
-
+  console.log(userCheck);
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode={'none'}>
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="TabScreen"
-          component={TabScreen}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="PlanProperty"
-          component={PlanProperty}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="CameraScreen"
-          component={CameraScreen}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="KeyOpen"
-          component={KeyOpen}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="CodeOTP"
-          component={CodeOTP}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="Success"
-          component={Success}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="Form"
-          component={Form}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="OpenAccount"
-          component={OpenAccount}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="Profile"
-          component={Profile}
-        />
-      </Stack.Navigator>
+      {userCheck===false ? (
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="AuthStack"
+            component={AuthStack}
+          />
+        </Stack.Navigator>
+      ) : (
+        <Stack.Navigator headerMode={'none'}>
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="TabScreen"
+            component={TabScreen}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="PlanProperty"
+            component={PlanProperty}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="CameraScreen"
+            component={CameraScreen}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="KeyOpen"
+            component={KeyOpen}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="CodeOTP"
+            component={CodeOTP}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Success"
+            component={Success}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Form"
+            component={Form}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="OpenAccount"
+            component={OpenAccount}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Profile"
+            component={Profile}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="AuthStack"
+            component={AuthStack}
+          />
+        </Stack.Navigator>
+      )}
     </NavigationContainer>
   );
 };

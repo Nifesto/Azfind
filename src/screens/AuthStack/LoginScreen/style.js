@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: WIDTH * 43,
-    marginLeft: WIDTH * 18,
+    marginLeft: WIDTH * 16,
     marginBottom: WIDTH * 205,
   },
   title: {
@@ -23,12 +23,15 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginRight: WIDTH * 9,
   },
+  body: {
+    paddingHorizontal: WIDTH * 16,
+  },
   input: {
     color: COLOR.BLACK_P,
-    width: WIDTH* 393,
-    height:WIDTH* 59,
-    borderWidth: WIDTH * 2  ,
-    marginHorizontal: WIDTH * 18,
+    width: WIDTH * 393,
+    height: WIDTH * 59,
+    borderWidth: WIDTH * 2,
+    // marginHorizontal: WIDTH * 16,
     borderRadius: WIDTH * 49,
     paddingHorizontal: WIDTH * 19,
     marginBottom: WIDTH * 23,
@@ -46,7 +49,7 @@ const styles = StyleSheet.create({
   },
   Remember: {
     flexDirection: 'row',
-    marginLeft: WIDTH * 18,
+    // marginLeft: WIDTH * 16,
     marginBottom: WIDTH * 17,
   },
   TextRemember: {
@@ -54,13 +57,13 @@ const styles = StyleSheet.create({
   },
   Sign: {
     flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     marginBottom: WIDTH * 32,
   },
   button: {
     width: WIDTH * 310,
     height: WIDTH * 47,
-    marginHorizontal: WIDTH * 18,
+
     backgroundColor: '#0E448A',
     alignItems: 'center',
     justifyContent: 'center',
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
   iconFace: {
     width: WIDTH * 47,
     height: WIDTH * 46,
-    marginRight: WIDTH * 18,
+    marginRight: WIDTH * 9,
   },
   TextInput: {
     fontSize: FONTSIZE.f_18,

@@ -61,7 +61,7 @@ const Images = {
   iconCheckCircle: require('./icons/iconCheckCircle.png'),
   iconArrowUp: require('./icons/iconArrowUp.png'),
   iconArrowDown: require('./icons/iconArrowDown.png'),
-
+  iconPlus: require('./icons/iconPlus.png'),
   //Images
   posterHome: require('./images/posterHome.png'),
   iconCircle: require('./icons/iconCircle.png'),

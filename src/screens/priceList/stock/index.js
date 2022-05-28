@@ -1,29 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Image, Text, View, TouchableOpacity, FlatList} from 'react-native';
+import {FlatList, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import styles from './styles';
-import HeaderHome from '../../component/headerHome';
-import Images from '../../assets';
-import Drawer from '../../navigation/drawer';
-import {ASYN, COLOR, WIDTH} from '../../base/core';
-import {useDispatch, useSelector} from 'react-redux';
-import {changeLanguage} from '../../redux/reducer/reducerLanguage';
-// import {useTranslation} from 'react-i18next';
-import i18n from '../../translate/i18n';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-const Item = props => {
-  return (
-    <TouchableOpacity style={styles.item} onPress={props.onPress}>
-      <Image source={props.src} style={styles.iconBar} />
-      <Text style={styles.txtBar}>{props.content}</Text>
-    </TouchableOpacity>
-  );
-};
-const Home = ({navigation}) => {
-  const dispatch = useDispatch();
-  const [visible, setVisible] = React.useState(false);
+import Images from '../../../assets';
+import {COLOR, WIDTH} from '../../../base/core';
 
-  const [data] = React.useState([
+const Stock = () => {
+  const [dataStock] = React.useState([
     {
       name: 'FPTFPT',
       khop: '115.20',
@@ -98,48 +81,6 @@ const Home = ({navigation}) => {
   const RenderHeader = () => {
     return (
       <>
-        <Image source={Images.posterHome} style={styles.poster} />
-        <Text>{i18n.t('home')}</Text>
-        <View style={styles.bar}>
-          <Item
-            src={Images.iconHand}
-            content={'Kế hoạch\ntích sản'}
-            onPress={() => {
-              navigation.navigate('Form');
-            }}
-          />
-          <Item
-            src={Images.iconHat}
-            content={'Học tập'}
-            onPress={() => {
-              navigation.navigate('KeyOpen');
-            }}
-          />
-          <Item
-            src={Images.iconChangeMoney}
-            content={'Nộp/\nRútTiền'}
-            onPress={() => {
-              navigation.navigate('OpenAccount');
-            }}
-          />
-          <Item
-            src={Images.iconNews}
-            content={'Tin trong\nngày'}
-            onPress={() => {
-              i18n.locale = 'en';
-              dispatch(changeLanguage('en'));
-            }}
-          />
-          <Item
-            src={Images.iconStar}
-            content={'VIP'}
-            onPress={() => {
-              i18n.locale = 'vi';
-              dispatch(changeLanguage('vi'));
-            }}
-          />
-        </View>
-        <Text style={styles.title}>Bảng giá tích sản</Text>
         <View style={styles.barTopInfo}>
           <View
             style={{
@@ -239,23 +180,23 @@ const Home = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <HeaderHome
-        onPressDraw={() => setVisible(true)}
-        onPressUser={() => navigation.navigate('Profile')}
-      />
+      <View style={styles.head}>
+        <TouchableOpacity style={styles.btnSearch}>
+          <Image source={Images.iconSearch} style={styles.iconSearch} />
+          <Text style={styles.txtSearch}>Tìm mã</Text>
+        </TouchableOpacity>
+      </View>
+      <RenderHeader />
       <View style={{flex: 1, paddingBottom: WIDTH * 75}}>
         <FlatList
-          data={data}
+          data={dataStock}
           keyExtractor={(_, index) => index.toString()}
-          ListHeaderComponent={RenderHeader}
+          //   ListHeaderComponent={RenderHeader}
           renderItem={RenderItem}
         />
-      </View>
-      <View>
-        <Drawer visible={visible} close={() => setVisible(false)} />
       </View>
     </View>
   );
 };
 
-export default Home;
+export default Stock;

@@ -121,7 +121,6 @@ const AuthStack = () => {
 
 const AppNavigation = () => {
   let userCheck = true;
-
   const [lang, setLang] = React.useState('vi');
   const dispatch = useDispatch();
   const language = useSelector(state => state.language.language);

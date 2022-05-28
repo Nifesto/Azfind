@@ -12,7 +12,7 @@ const HeaderHome = props => {
         <TouchableOpacity style={styles.btn}>
           <Image source={Images.iconSearch} style={styles.iconRight} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={props.onPressBell}>
           <Image source={Images.iconBell} style={styles.iconRight} />
           <View style={styles.viewNumber}>
             <Text style={styles.number}>99</Text>

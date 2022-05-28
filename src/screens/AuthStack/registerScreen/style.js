@@ -24,9 +24,9 @@ const styles = StyleSheet.create({
   },
   body: {paddingHorizontal: WIDTH * 16},
   input: {
-    width: WIDTH * 393,
     height: WIDTH * 59,
     borderWidth: WIDTH * 2,
+    borderColor: '#414141',
     borderRadius: WIDTH * 49,
     paddingLeft: WIDTH * 19,
     marginVertical: WIDTH * 23,

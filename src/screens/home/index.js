@@ -99,7 +99,6 @@ const Home = ({navigation}) => {
     return (
       <>
         <Image source={Images.posterHome} style={styles.poster} />
-        <Text>{i18n.t('home')}</Text>
         <View style={styles.bar}>
           <Item
             src={Images.iconHand}
@@ -242,6 +241,7 @@ const Home = ({navigation}) => {
       <HeaderHome
         onPressDraw={() => setVisible(true)}
         onPressUser={() => navigation.navigate('Profile')}
+        onPressBell={() => navigation.navigate('Notification')}
       />
       <View style={{flex: 1, paddingBottom: WIDTH * 75}}>
         <FlatList

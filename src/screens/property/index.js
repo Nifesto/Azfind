@@ -37,6 +37,7 @@ const Property = ({navigation}) => {
       <HeaderHome
         onPressDraw={() => setVisible(true)}
         onPressUser={() => navigation.navigate('Profile')}
+        onPressBell={() => navigation.navigate('Notification')}
       />
       <View style={styles.viewLabel}>
         {title.map((item, index) => {

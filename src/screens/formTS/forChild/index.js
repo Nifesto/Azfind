@@ -13,17 +13,13 @@ import Images from './../../../assets/index';
 const ForChild = props => {
   return (
     <View style={styles.container}>
-      <View style={styles.accumulation}>
-        <Text style={styles.text_1}>{props.name}</Text>
-        <View style={styles.box}>
-          <Text style={styles.text_2}>0đ</Text>
-          <Image
-            source={Images.iconDropdown}
-            resizeMode="contain"
-            style={styles.more}
-          />
-        </View>
-      </View>
+      <Text style={styles.text_1}>{props.name}</Text>
+      <Text style={styles.text_2}>100.000.000.000</Text>
+      <Image
+        source={props.visibleImage ? Images.iconDropUp : Images.iconDropdown}
+        resizeMode="contain"
+        style={styles.more}
+      />
     </View>
   );
 };

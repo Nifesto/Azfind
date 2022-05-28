@@ -8,7 +8,7 @@ import {
 } from '../../../base/core';
 
 const styles = StyleSheet.create({
-  container: {flex: 1, backgroundColor: '#FFFFFF', width: WIDTH_WINDOW},
+  container: {flex: 1, backgroundColor: '#F1F1F1', width: WIDTH_WINDOW},
   stt: {
     color: '#222',
   },
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     color: COLOR.BLACK_P,
     fontFamily: FONT_FAMILY.regular,
     fontSize: FONTSIZE.f_10,
-    marginLeft: WIDTH *20
+    marginLeft: WIDTH * 20,
   },
 });
 

@@ -12,7 +12,7 @@ const en = {
   wealthPlan: 'WEALTH PLAN',
   assetsForChildren: 'ASSETS FOR CHILDREN',
   retirement_Assets: 'RETIREMENT ASSETS',
-  SavingToBuyACarAndAHouse: 'SAVING TO BUY A CAR AND A HOUSE',
+  SavingToBuyACarAndAHouse: 'SAVING TO BUY CAR/HOUSE',
   targetAmount: 'Target amount',
   startingAge: 'Starting age',
   endAge: 'End age',

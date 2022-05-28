@@ -2,7 +2,8 @@ import React from 'react';
 import {View, FlatList, Text, TouchableOpacity, Image} from 'react-native';
 import styles from './style';
 import Images from '../../../assets';
-import {WIDTH_WINDOW} from '../../../base/core'
+import {COLOR, WIDTH_WINDOW} from '../../../base/core';
+import {useNavigation} from '@react-navigation/native';
 const Account = () => {
   const [data, setData] = React.useState([
     {
@@ -88,11 +89,14 @@ const Account = () => {
     );
   };
   return (
-    <View style={{flex:1,width:WIDTH_WINDOW}}>
+    <View style={{flex: 1, width: WIDTH_WINDOW, backgroundColor: '#F1F1F1'}}>
       <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={(_, index) => index.toString()}
+        ItemSeparatorComponent={() => (
+          <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
+        )}
       />
     </View>
   );

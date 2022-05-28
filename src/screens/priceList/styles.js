@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: WIDTH * 16,
+    paddingTop:WIDTH*12
   },
   viewItem: {
     width: (WIDTH_WINDOW - WIDTH * 32 - WIDTH * 16 * 3) / 4,

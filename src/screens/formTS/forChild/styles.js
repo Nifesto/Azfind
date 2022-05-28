@@ -4,8 +4,14 @@ const windowHeight = Dimensions.get('window').height;
 import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../../base/core';
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLOR.WHITE_P,
+    marginHorizontal: WIDTH * 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F1F1F1',
+    paddingVertical: WIDTH * 9,
     paddingHorizontal: WIDTH * 16,
+    marginTop: WIDTH * 6,
+    borderRadius: WIDTH * 5,
   },
   accumulation: {
     flexDirection: 'row',
@@ -19,12 +25,16 @@ const styles = StyleSheet.create({
   },
   text_1: {
     color: '#0E448A',
-    fontSize: FONTSIZE.f_20,
+    fontSize: FONTSIZE.f_15,
     fontFamily: FONT_FAMILY.bold,
+    flex: 3.5,
   },
   text_2: {
     color: '#404040',
-    fontSize: FONTSIZE.f_20,
+    fontSize: FONTSIZE.f_15,
+    flex: 2,
+    textAlign: 'right',
+    paddingRight: WIDTH * 8,
   },
 
   more: {
@@ -36,7 +46,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: WIDTH * 40,
   },
 });
 export default styles;

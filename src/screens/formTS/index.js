@@ -154,7 +154,10 @@ const Form = ({navigation}) => {
           onPress={() => {
             setVisibleOne(!visibleOne);
           }}>
-          <ForChild name={i18n.t('assetsForChildren')} />
+          <ForChild
+            name={i18n.t('assetsForChildren')}
+            visibleImage={visibleOne}
+          />
         </TouchableOpacity>
         {visibleOne && (
           <Hander
@@ -174,7 +177,10 @@ const Form = ({navigation}) => {
           onPress={() => {
             setVisibleTwo(!visibleTwo);
           }}>
-          <ForChild name={i18n.t('retirement_Assets')} />
+          <ForChild
+            name={i18n.t('retirement_Assets')}
+            visibleImage={visibleTwo}
+          />
         </TouchableOpacity>
         {visibleTwo && (
           <Hander
@@ -194,7 +200,10 @@ const Form = ({navigation}) => {
           onPress={() => {
             setVisibleThree(!visibleThree);
           }}>
-          <ForChild name={i18n.t('SavingToBuyACarAndAHouse')} />
+          <ForChild
+            name={i18n.t('SavingToBuyACarAndAHouse')}
+            visibleImage={visibleThree}
+          />
         </TouchableOpacity>
         {visibleThree && (
           <Hander

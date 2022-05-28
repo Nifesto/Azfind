@@ -26,7 +26,7 @@ const ItemHeader = ({item}) => {
     </View>
   );
 };
-const PriceList = () => {
+const PriceList = ({navigation}) => {
   const [dataHead] = React.useState([
     {
       name: 'VN INDEX',
@@ -72,10 +72,14 @@ const PriceList = () => {
   };
   return (
     <View style={styles.container}>
-      <HeaderHome />
+      <HeaderHome
+        onPressDraw={() => setVisible(true)}
+        onPressUser={() => navigation.navigate('Profile')}
+        onPressBell={() => navigation.navigate('Notification')}
+      />
       <View style={styles.containerHeader}>
         {dataHead.map((item, index) => {
-          return <ItemHeader item={item} />;
+          return <ItemHeader item={item} key={index} />;
         })}
       </View>
       <View style={styles.viewLabel}>

@@ -30,6 +30,7 @@ import Login from '../screens/AuthStack/LoginScreen';
 import Register from '../screens/AuthStack/registerScreen';
 import ForgetPass from '../screens/AuthStack/forgetPassword';
 import ConfirmPass from '../screens/AuthStack/confirmPass';
+import Notification from '../screens/NotifiScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -147,7 +148,6 @@ const AppNavigation = () => {
   React.useEffect(() => {
     _CheckDataAccount();
   }, []);
-  console.log(userCheck);
   return (
     <NavigationContainer>
       {userCheck===false ? (
@@ -209,6 +209,11 @@ const AppNavigation = () => {
             options={{headerShown: false}}
             name="AuthStack"
             component={AuthStack}
+          />
+           <Stack.Screen
+            options={{headerShown: false}}
+            name="Notification"
+            component={Notification}
           />
         </Stack.Navigator>
       )}

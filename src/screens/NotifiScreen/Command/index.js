@@ -1,9 +1,164 @@
 import React from 'react';
 import {View, TouchableOpacity, Text, FlatList, Image} from 'react-native';
 import Images from '../../../assets';
+import {COLOR} from '../../../base/core';
 import styles from './style';
 const Command = () => {
   const [data, setData] = React.useState([
+    {
+      img: Images.iconDone,
+      stt: 'Khớp',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: '100 CP',
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconDone,
+      stt: 'Khớp',
+      sdt: '0356669474',
+      cmd: 'bán',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconDone,
+      stt: 'Khớp',
+      sdt: '0356669474',
+      cmd: 'bán',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconDone,
+      stt: 'Khớp',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: '100 CP',
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconDone,
+      stt: 'Khớp',
+      sdt: '0356669474',
+      cmd: 'bán',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconWait,
+      stt: 'Chờ gửi lên sàn',
+      sdt: '0356669474',
+      cmd: 'mua',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconDone,
+      stt: 'Khớp',
+      sdt: '0356669474',
+      cmd: 'bán',
+      quantity: 100,
+      brand: 'HPG',
+      price: 47.5,
+      time: '12.45',
+      date: '03/07/2002',
+    },
     {
       img: Images.iconDone,
       stt: 'Khớp',
@@ -91,10 +246,10 @@ const Command = () => {
           <View style={styles.content}>
             <Text style={styles.sdt}>{item.sdt}</Text>
             <TouchableOpacity>
-              {item.item.cmd === 'bán' ? (
-                <Text style={{...styles.cmd, color:'red'}}> {item.cmd}</Text>
+              {item.cmd === 'bán' ? (
+                <Text style={{...styles.cmd, color: 'red'}}> {item.cmd}</Text>
               ) : (
-                <Text style={{...styles.cmd, color:'green'}}> {item.cmd}</Text>
+                <Text style={{...styles.cmd, color: 'green'}}> {item.cmd}</Text>
               )}
             </TouchableOpacity>
             <Text style={styles.quantity}> {item.quantity}</Text>
@@ -118,6 +273,9 @@ const Command = () => {
         data={data}
         renderItem={renderItem}
         keyExtractor={(_, index) => index.toString()}
+        ItemSeparatorComponent={() => (
+          <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
+        )}
       />
     </View>
   );

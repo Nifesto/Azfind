@@ -66,7 +66,6 @@ const vi = {
   depositoryNumber: ' Số lưu ký',
   identityCardNumber: 'Số chứng minh nhân dân',
   email: 'Email',
-  phoneNumber: 'Số điện thoại',
   address:'Địa chỉ',
   language:' Ngôn ngữ',  
   notification: 'Thông báo',

@@ -66,7 +66,6 @@ const en = {
   depositoryNumber: ' Depository number ',
   identityCardNumber: 'Identity Card Number',
   email: ' Email ',
-  phoneNumber: ' Phone Number',
   address: ' Address',
   language: 'Language',
   notification: 'Notification',

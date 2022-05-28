@@ -9,7 +9,7 @@ const en = {
   changePassword: 'Change Password',
   loginWithFace: 'Login with Face/ Touch ID',
   logOut: 'Logout',
-  wealthPlan: 'WEALTH PLAN',
+  wealthPlan: 'ACCUMULATION PLAN',
   assetsForChildren: 'ASSETS FOR CHILDREN',
   retirement_Assets: 'RETIREMENT ASSETS',
   SavingToBuyACarAndAHouse: 'SAVING TO BUY CAR/HOUSE',
@@ -65,7 +65,7 @@ const en = {
   codeCK: 'Code Ck',
   matching:'Matching',
   flexibleInvestment: 'FLEXIBLE INVESTMENT',
-  alls:'ALL'
+  alls:'ALL',
 
 
 };

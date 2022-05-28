@@ -7,6 +7,10 @@ import {WIDTH} from '../../base/core';
 import i18n from 'i18n-js';
 import {useDispatch} from 'react-redux';
 import {changeLanguage} from '../../redux/reducer/reducerLanguage';
+import ModalTwoButton from '../../component/modalTwoButton';
+import ModalRegister from '../../component/modalRegisterSuccess';
+import ModalRequets from '../../component/modalRequest';
+import ModalChangePassword from '../../component/modalChangePassword';
 const Profile = ({navigation}) => {
   const [lang, setLang] = React.useState('');
   const {t} = i18n;
@@ -167,6 +171,13 @@ const Profile = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
+      {/* <ModalView
+        isShow={visible}
+        title={props.accessLanguage.notification}
+        content={props.accessLanguage.dellAll}
+        close={() => setVisible(false)}
+        accept={deleteCart}
+      /> */}
     </View>
   );
 };

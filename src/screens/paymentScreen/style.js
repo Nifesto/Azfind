@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
   iconBell: {
     width: WIDTH * 27,
     height: WIDTH * 27,
-    tintColor: '#FFF',
+    // tintColor: '#FFF',
+    resizeMode:'contain',
   },
   iconBack: {
     width: WIDTH * 27,

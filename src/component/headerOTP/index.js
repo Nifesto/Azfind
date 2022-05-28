@@ -5,11 +5,13 @@ import Images from '../../assets';
 const HeaderOTP = props => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={props.btnLeft}>
-        <Image source={Images.iconBack} style={styles.icon} />
-      </TouchableOpacity>
-      <Text style={styles.title}>{props.title}</Text>
-      <View />
+      <View style={styles.header}>
+        <TouchableOpacity onPress={props.btnLeft}>
+          <Image source={Images.iconBack} style={styles.icon} />
+        </TouchableOpacity>
+        <Text style={styles.title}>{props.title}</Text>
+        <View />
+      </View>
     </View>
   );
 };

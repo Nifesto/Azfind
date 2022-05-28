@@ -7,19 +7,26 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#E5E5E5',
   },
-  contain: {
-    paddingHorizontal: WIDTH * 19,
+  body: {
+    paddingHorizontal: WIDTH * 16,
     alignItems: 'center',
   },
+  logo: {
+    width: WIDTH * 226,
+    height: WIDTH * 76,
+    resizeMode: 'contain',
+    marginTop: WIDTH * 100,
+    marginBottom: WIDTH * 19,
+  },
   text: {
-    marginTop: WIDTH * 57,
-    color: '#000',
-    fontSize: FONTSIZE.f_18,
+    color:COLOR.BLACK_P,
+    fontSize: FONTSIZE.f_20,
   },
   text_1: {
     marginTop: WIDTH * 20,
-    color: '#000',
-    fontSize: FONTSIZE.f_18,
+    color:COLOR.BLACK_P,
+    fontSize: FONTSIZE.f_19,
+    fontFamily: FONT_FAMILY.regular
   },
   input: {
     letterSpacing: 10,
@@ -32,10 +39,11 @@ const styles = StyleSheet.create({
     color: '#000',
     fontWeight: '600',
     borderRadius: 5,
+    padding: 0,
   },
   txtCf: {
     color: '#fff',
-    fontSize: FONTSIZE.f_20,
+    fontSize: FONTSIZE.f_18,
     fontFamily: FONT_FAMILY.medium,
   },
   confirm: {
@@ -45,7 +53,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    marginTop: WIDTH * 337,
+    marginTop: WIDTH * 14,
   },
+  footer:{
+    marginTop: WIDTH *37,
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    width: WIDTH*393
+  },
+  textFooter:{
+    fontSize: FONTSIZE.f_15,
+    fontFamily: FONT_FAMILY.regular,
+    color: COLOR.BLACK_P
+  }
 });
 export default styles;

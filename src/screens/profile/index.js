@@ -15,6 +15,7 @@ const Profile = ({navigation}) => {
   const [check1, setCheck1] = React.useState(false);
   const [check2, setCheck2] = React.useState(false);
   const [check3, setCheck3] = React.useState(false);
+  const [check4, setCheck4] = React.useState(false);
   const [check6, setCheck6] = React.useState(false);
 
   const changeLanguageToVN = () => {
@@ -155,9 +156,13 @@ const Profile = ({navigation}) => {
         {check3 && (
           <View style={styles.show}>
             <Text style={styles.language}>Đăng nhập bằng Face/ Touch ID</Text>
-
-            <TouchableOpacity style={styles.icon_languages}>
-              <Image style={styles.icon_language} source={Images.iconSwitch} />
+            <TouchableOpacity
+              onPress={() => setCheck4(!check4)}
+              style={styles.icon_languages}>
+              <Image
+                style={styles.icon_language}
+                source={!check4 ? Images.iconSwitch : Images.iconSwitchOff}
+              />
             </TouchableOpacity>
           </View>
         )}

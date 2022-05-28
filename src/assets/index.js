@@ -1,6 +1,8 @@
 const Images = {
   //icon
   iconProfile: require('./icons/iconProfile.png'),
+  iconSwitchOff: require('./icons/iconSwitchOff.png'),
+  iconUp: require('./icons/iconUp.png'),
   iconCopy: require('./icons/iconCopy.png'),
   iconPaper: require('./icons/iconPaper.png'),
   iconDone: require('./icons/iconDone.png'),

@@ -41,7 +41,7 @@ const ChangeMoney = () => {
             <Text style={styles.text_ex}>Tiền từ sức mua: 302.456.340 đ </Text>
           </View>
           <View style={styles.main}>
-            <Text style={styles.title}>Đến tài khoản</Text>
+            <Text style={styles.title}>ĐẾN TÀI KHOẢN</Text>
             <TextInput
               onChangeText={onChangeAccBank}
               value={accBank}
@@ -50,7 +50,7 @@ const ChangeMoney = () => {
             />
           </View>
           <View style={styles.main}>
-            <Text style={styles.title}>Số tiền chuyển</Text>
+            <Text style={styles.title}>SỐ TIỀN CHUYỂN</Text>
             <TextInput
               onChangeText={onChangeNumber}
               value={number}
@@ -58,7 +58,7 @@ const ChangeMoney = () => {
               style={styles.input}
             />
           </View>
-          <Text style={styles.title}>Nội dụng</Text>
+          <Text style={styles.title}>NỘI DUNG</Text>
           <TextInput
             onChangeText={onChangeContent}
             value={content}
@@ -67,7 +67,7 @@ const ChangeMoney = () => {
             style={styles.input2}
           />
           <View style={styles.main}>
-            <Text style={styles.title}>Mật khẩu</Text>
+            <Text style={styles.title}>MẬT KHẨU</Text>
             <TextInput
               onChangeText={onChangePass}
               value={pass}

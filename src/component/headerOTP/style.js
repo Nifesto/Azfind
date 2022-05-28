@@ -1,27 +1,33 @@
 import {StyleSheet} from 'react-native';
-import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
+import {
+  COLOR,
+  FONTSIZE,
+  FONT_FAMILY,
+  WIDTH,
+  WIDTH_WINDOW,
+} from '../../base/core';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLOR.MAIN_P,
-    height: WIDTH * 90,
-    paddingTop: WIDTH * 20,
-    // paddingBottom: WIDTH * 15,
+    // flex: 1,
+  },
+  header: {
     flexDirection: 'row',
+    marginTop: WIDTH * 43,
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: WIDTH * 16,
   },
   icon: {
-    width: WIDTH * 26,
-    height: WIDTH * 26,
+    width: WIDTH * 23,
+    height: WIDTH * 23,
     resizeMode: 'contain',
-    tintColor: COLOR.WHITE_P,
+    tintColor: COLOR.MAIN_P,
+    marginRight: WIDTH*9
   },
   title: {
-    color: COLOR.WHITE_P,
+    color: COLOR.MAIN_P,
     fontFamily: FONT_FAMILY.bold,
-    fontSize: FONTSIZE.f_16,
+    fontSize: FONTSIZE.f_18,
   },
 });
 export default styles;

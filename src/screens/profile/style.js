@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     marginBottom: WIDTH * 2,
   },
   iconDropUp: {
+    flex:1,
     width: WIDTH * 15,
     height: WIDTH * 9,
     resizeMode: 'contain',

@@ -1,15 +1,20 @@
-import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH, WIDTH_WINDOW} from '../../../base/core';
+import {
+  COLOR,
+  FONTSIZE,
+  FONT_FAMILY,
+  WIDTH,
+  WIDTH_WINDOW,
+} from '../../../base/core';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width:WIDTH_WINDOW,
+    width: WIDTH_WINDOW,
   },
   body: {
     paddingHorizontal: WIDTH * 16,
-    marginTop: WIDTH *40
-    
+    marginTop: WIDTH * 40,
   },
   main: {
     flexDirection: 'row',
@@ -69,6 +74,8 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.f_11,
     color: COLOR.BLACK_P,
     backgroundColor: '#E8E7E7',
+    paddingHorizontal: WIDTH * 10,
+    paddingVertical: 5,
   },
   button: {
     width: WIDTH * 393,

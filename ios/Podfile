@@ -18,7 +18,12 @@ target 'Azfind' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  permissions_path = '../node_modules/react-native-permissions/ios'
 
+  pod 'Permission-Camera', :path => "../node_modules/react-native-permissions/ios/Camera/Permission-Camera.podspec"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+  pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
+  pod 'Permission-FaceID', :path => "#{permissions_path}/FaceID"
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
   target 'AzfindTests' do

@@ -60,5 +60,13 @@ const en = {
   female: 'Female',
   other: 'Other',
   registration: 'REGISTRATION',
+  stopAccumulating: 'Stop\naccumulate',
+  considerSelling: 'Consider\nselling',
+  codeCK: 'Code Ck',
+  matching:'Matching',
+  flexibleInvestment: 'FLEXIBLE INVESTMENT',
+  alls:'ALL'
+
+
 };
 export default en;

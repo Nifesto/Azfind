@@ -60,5 +60,13 @@ const vi = {
   female: 'Nữ',
   other: 'Khác',
   registration: 'ĐĂNG KÝ',
+  stopAccumulating:'Ngừng\ntích sản',
+  considerSelling:' Cân\nnhắc bán',
+  codeCK: 'Mã Ck',
+  matching:'Khớp',
+  flexibleInvestment:'ĐẦU TƯ NĂNG ĐỘNG',
+  alls:'TỔNG TÀI SẢN'
+
+
 };
 export default vi;

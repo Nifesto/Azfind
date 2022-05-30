@@ -60,7 +60,6 @@ const en = {
   female: 'Female',
   other: 'Other',
   registration: 'REGISTRATION',
-<<<<<<< HEAD
   accountList: ' Account list',
   customerName: ' Customer name',
   referrerName: 'Referrer name',
@@ -85,7 +84,6 @@ const en = {
   toAccount: 'To the Account',
   content: 'Content',
   password: 'Password',
-=======
   stopAccumulating: 'Stop\naccumulate',
   considerSelling: 'Consider\nselling',
   codeCK: 'Code Ck',
@@ -94,6 +92,5 @@ const en = {
   alls:'ALL',
 
 
->>>>>>> c1c65c1ebe3cce1e973b347e06040d19ff6df230
 };
 export default en;

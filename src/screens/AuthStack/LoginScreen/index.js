@@ -1,9 +1,15 @@
 import React from 'react';
-import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import styles from './style';
 import Images from '../../../assets';
-import {WIDTH} from '../../../base/core';
-import {useNavigation} from '@react-navigation/native';
+import {WIDTH, COLOR} from '../../../base/core';
 const Login = ({navigation}) => {
   const [number, onChangeNumber] = React.useState('');
   const [check, setCheck] = React.useState(true);
@@ -17,6 +23,7 @@ const Login = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="transparent" barStyle="dark-content" translucent/>
       <View style={styles.header}>
         <TouchableOpacity>
           <Image style={styles.iconBack} source={Images.iconBack} />
@@ -24,6 +31,9 @@ const Login = ({navigation}) => {
         <Text style={styles.title}>ĐĂNG NHẬP</Text>
       </View>
       <View style={styles.body}>
+        <View style={styles.logo}>
+          <Image style={styles.iconLogo} source={Images.iconLogo} />
+        </View>
         <TextInput
           style={styles.input}
           onChangeText={onChangeNumber}
@@ -62,7 +72,9 @@ const Login = ({navigation}) => {
           <Text style={styles.TextRemember}>Nhớ mật khẩu</Text>
         </View>
         <View style={styles.Sign}>
-          <TouchableOpacity onPress={() =>navigation.navigate('TabScreen')} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('TabScreen')}
+            style={styles.button}>
             <Text style={styles.TextInput}>SIGN IN</Text>
           </TouchableOpacity>
           <TouchableOpacity>

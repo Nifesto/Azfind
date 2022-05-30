@@ -3,14 +3,20 @@ import {FONTSIZE, COLOR, WIDTH, FONT_FAMILY} from '../../../base/core';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: COLOR.WHITE_P,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: WIDTH * 43,
     marginLeft: WIDTH * 16,
-    marginBottom: WIDTH * 205,
+    marginBottom: WIDTH * 78,
+  },
+  logo:{alignItems: 'center', },
+  iconLogo: {
+    width: WIDTH * 226,
+    height: WIDTH * 76,
+    marginBottom: WIDTH * 51,
   },
   title: {
     fontSize: FONTSIZE.f_18,

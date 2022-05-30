@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform, StatusBar} from 'react-native';
 import {
   COLOR,
   FONTSIZE,
@@ -13,13 +13,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#E5E5E5',
   },
   header: {
-    width: WIDTH_WINDOW,
     height: WIDTH * 92,
     backgroundColor: COLOR.MAIN_P,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: WIDTH * 16,
-    paddingTop: WIDTH * 49,
+    paddingTop: Platform.OS === 'ios' ? WIDTH * 30 : StatusBar.currentHeight,
   },
   iconBack: {
     width: WIDTH * 32,

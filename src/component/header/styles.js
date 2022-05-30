@@ -1,11 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Platform,StatusBar} from 'react-native';
 import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLOR.MAIN_P,
-    height: WIDTH * 90,
-    paddingTop: WIDTH * 30,
+    height: WIDTH * 92,
+    paddingTop: Platform.OS === 'ios' ? WIDTH * 30 : StatusBar.currentHeight,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

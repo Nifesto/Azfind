@@ -2,8 +2,44 @@ import React from 'react';
 import {View, TouchableOpacity, Text, FlatList, Image} from 'react-native';
 import Images from '../../../assets';
 import styles from './style';
+import {COLOR} from '../../../base/core';
 const News = () => {
   const [data, setData] = React.useState([
+    {
+      img: Images.iconNews,
+      title:
+        'Lễ ký kết thỏa thuận hợp tác giữa VMO Holdings Tech.,JSC và AzFin Việt Nam',
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconNews,
+      title:
+        'Lễ ký kết thỏa thuận hợp tác giữa VMO Holdings Tech.,JSC và AzFin Việt Nam',
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconNews,
+      title:
+        'Lễ ký kết thỏa thuận hợp tác giữa VMO Holdings Tech.,JSC và AzFin Việt Nam',
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconNews,
+      title:
+        'Lễ ký kết thỏa thuận hợp tác giữa VMO Holdings Tech.,JSC và AzFin Việt Nam',
+      time: '12.45',
+      date: '03/07/2002',
+    },
+    {
+      img: Images.iconNews,
+      title:
+        'Lễ ký kết thỏa thuận hợp tác giữa VMO Holdings Tech.,JSC và AzFin Việt Nam',
+      time: '12.45',
+      date: '03/07/2002',
+    },
     {
       img: Images.iconNews,
       title:
@@ -75,6 +111,9 @@ const News = () => {
         data={data}
         renderItem={renderItem}
         keyExtractor={(_, index) => index.toString()}
+        ItemSeparatorComponent={() => (
+          <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
+        )}
       />
     </View>
   );

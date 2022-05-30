@@ -1,5 +1,11 @@
-import {StyleSheet} from 'react-native';
-import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH, WIDTH_WINDOW} from '../../base/core';
+import {StyleSheet, Platform, StatusBar} from 'react-native';
+import {
+  COLOR,
+  FONTSIZE,
+  FONT_FAMILY,
+  WIDTH,
+  WIDTH_WINDOW,
+} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -7,11 +13,10 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     height: WIDTH * 92,
-    width: WIDTH * 428,
     backgroundColor: '#0E448A',
-    paddingHorizontal: WIDTH * 18,
+    paddingHorizontal: WIDTH * 16,
     justifyContent: 'space-between',
-    paddingTop: WIDTH * 50,
+    paddingTop: Platform.OS === 'ios' ? WIDTH * 30 : StatusBar.currentHeight,
   },
   header_right: {
     flexDirection: 'row',
@@ -20,7 +25,7 @@ const styles = StyleSheet.create({
     width: WIDTH * 27,
     height: WIDTH * 27,
     // tintColor: '#FFF',
-    resizeMode:'contain',
+    resizeMode: 'contain',
   },
   iconBack: {
     width: WIDTH * 27,

@@ -3,7 +3,6 @@ import {View, FlatList, Text, TouchableOpacity, Image} from 'react-native';
 import styles from './style';
 import Images from '../../../assets';
 import {COLOR, WIDTH_WINDOW} from '../../../base/core';
-import {useNavigation} from '@react-navigation/native';
 const Account = () => {
   const [data, setData] = React.useState([
     {

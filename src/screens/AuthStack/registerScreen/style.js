@@ -3,7 +3,7 @@ import {COLOR, WIDTH, FONTSIZE, FONT_FAMILY} from '../../../base/core';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: COLOR.WHITE_P,
   },
   header: {
     flexDirection: 'row',

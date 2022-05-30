@@ -1,8 +1,4 @@
-import {StyleSheet} from 'react-native';
-import {Dimensions} from 'react-native';
-const windowWidth = Dimensions.get('window').width / 100;
-const windowHeight = Dimensions.get('window').height / 100;
-const {width, height} = Dimensions.get('window');
+import {StyleSheet, Platform, StatusBar} from 'react-native';
 import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
@@ -11,8 +7,8 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: COLOR.MAIN_P,
-    height: WIDTH * 90,
-    paddingTop: WIDTH * 30,
+    height: WIDTH * 92,
+    paddingTop: Platform.OS === 'ios' ? WIDTH * 30 : StatusBar.currentHeight,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -86,7 +82,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: FONTSIZE.f_12,
-    color: COLOR.BLACK_P,
+    color: COLOR.MAIN_P,
     fontFamily: FONT_FAMILY.regular
   },
   text1: {

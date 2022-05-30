@@ -120,7 +120,7 @@ const AuthStack = () => {
 // };
 
 const AppNavigation = () => {
-  let userCheck = false;
+  let userCheck = true;
 
   const [lang, setLang] = React.useState('vi');
   const dispatch = useDispatch();

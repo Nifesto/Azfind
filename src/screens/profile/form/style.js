@@ -15,8 +15,10 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: FONTSIZE.f_15,
-    color: '#222',
+    color: COLOR.BLACK_P,
     marginLeft: WIDTH * 14,
+    fontFamily: FONT_FAMILY.regular
+    
   },
 });
 export default styles;

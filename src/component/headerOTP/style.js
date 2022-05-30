@@ -8,12 +8,12 @@ import {
 } from '../../base/core';
 
 const styles = StyleSheet.create({
+  
   container: {
-    // flex: 1,
-  },
-  header: {
+    backgroundColor: COLOR.MAIN_P,
+    height: WIDTH * 90,
+    paddingTop: WIDTH * 30,
     flexDirection: 'row',
-    marginTop: WIDTH * 43,
     alignItems: 'center',
     paddingHorizontal: WIDTH * 16,
   },

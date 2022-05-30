@@ -51,6 +51,14 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Cho phép truy cập camera để chụp ảnh lưu hình ảnh trên hệ thống.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Cho phép truy cập thư viện của bạn để lưu hình ảnh trên hệ thống.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Cho phép truy cập thư viện của bạn để lưu hình ảnh trên hệ thống.</string>
+	<key>NSFaceIDUsageDescription</key>
+    <string>Cho phép truy cập FaceId của bạn để đăng nhập.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Bold.ttf</string>

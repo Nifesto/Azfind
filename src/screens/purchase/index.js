@@ -13,7 +13,7 @@ import HeaderHome from '../../component/headerHome';
 import {COLOR, WIDTH_WINDOW} from '../../base/core';
 import Drawer from '../../navigation/drawer';
 import ListOrder from './listOrder';
-import SetOder from './setOder/indexx';
+import SetOder from './setOder';
 const Purchase = ({navigation}) => {
   const [visible, setVisible] = React.useState(false);
   const [choose, setChoose] = React.useState(0);
@@ -68,6 +68,7 @@ const Purchase = ({navigation}) => {
       <View>
         <Drawer visible={visible} close={() => setVisible(false)} />
       </View>
+     
     </View>
   );
 };

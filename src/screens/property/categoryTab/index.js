@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import styles from './styles';
 import Images from '../../../assets';
 import {WIDTH} from '../../../base/core';
+import i18n from '../../../translate/i18n';
 const Item = ({title, src, onPress}) => {
   return (
     <>
@@ -93,7 +94,7 @@ const CategoryTab = () => {
     <View style={styles.container}>
       <ScrollView>
         <Item
-          title={'TỔNG TÀI SẢN'}
+          title={i18n.t('alls')}
           src={checkAll ? Images.iconDropUp : Images.iconDropdown}
           onPress={() => setCheckAll(!checkAll)}
         />
@@ -110,7 +111,7 @@ const CategoryTab = () => {
           </View>
         )}
         <Item
-          title={'TÍCH SẢN CHO HƯU TRÍ'}
+          title={i18n.t('retirement_Assets')}
           src={checkRetire ? Images.iconDropUp : Images.iconDropdown}
           onPress={() => setCheckRetire(!checkRetire)}
         />
@@ -127,7 +128,7 @@ const CategoryTab = () => {
           </View>
         )}
         <Item
-          title={'TÍCH SẢN CHO CON'}
+          title={i18n.t('assetsForChildren')}
           src={checkChild ? Images.iconDropUp : Images.iconDropdown}
           onPress={() => setCheckChild(!checkChild)}
         />
@@ -144,7 +145,7 @@ const CategoryTab = () => {
           </View>
         )}
         <Item
-          title={'TÍCH SẢN MUA NHÀ/OTO'}
+          title={i18n.t('SavingToBuyACarAndAHouse')}
           src={checkProperty ? Images.iconDropUp : Images.iconDropdown}
           onPress={() => setCheckProperty(!checkProperty)}
         />
@@ -161,7 +162,7 @@ const CategoryTab = () => {
           </View>
         )}
         <Item
-          title={'ĐẦU TƯ NĂNG ĐỘNG'}
+          title={i18n.t('flexibleInvestment')}
           src={checkFlexible ? Images.iconDropUp : Images.iconDropdown}
           onPress={() => setCheckFlexible(!checkFlexible)}
         />

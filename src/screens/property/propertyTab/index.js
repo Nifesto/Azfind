@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './styles';
 import Images from '../../../assets';
 import {WIDTH_WINDOW} from '../../../base/core';
+import i18n from '../../../translate/i18n';
 const Item = ({title, value, onPress}) => {
   return (
     <>
@@ -20,11 +21,11 @@ const PropertyTab = () => {
   const refScroll = React.useRef();
   return (
     <View style={styles.container}>
-      <Item title={'TỔNG TÀI SẢN'} value={'600.000.000đ'} />
-      <Item title={'TÍCH SẢN CHO HƯU TRÍ'} value={'600.000.000đ'} />
-      <Item title={'TÍCH SẢN CHO CON'} value={'600.000.000đ'} />
-      <Item title={'TÍCH SẢN MUA NHÀ/OTO'} value={'600.000.000đ'} />
-      <Item title={'ĐẦU TƯ NĂNG ĐỘNG'} value={'600.000.000đ'} />
+      <Item title={i18n.t('alls')} value={'600.000.000đ'} />
+      <Item title={i18n.t('retirement_Assets')} value={'600.000.000đ'} />
+      <Item title={i18n.t('assetsForChildren')} value={'600.000.000đ'} />
+      <Item title={i18n.t('SavingToBuyACarAndAHouse')} value={'600.000.000đ'} />
+      <Item title={i18n.t('flexibleInvestment')} value={'600.000.000đ'} />
     </View>
   );
 };

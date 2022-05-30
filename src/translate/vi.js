@@ -60,6 +60,7 @@ const vi = {
   female: 'Nữ',
   other: 'Khác',
   registration: 'ĐĂNG KÝ',
+<<<<<<< HEAD
   accountList: 'Danh sách tài khoản ',
   customerName: 'Tên khách hàng',
   referrerName: ' Tên người giới thiệu',
@@ -80,5 +81,15 @@ const vi = {
   beneficiaryName:'Tên đơn vị thụ hưởng',
   transferContents:'Nội dung chuyển khoản',
   transactionType:'Transaction type'
+=======
+  stopAccumulating:'Ngừng\ntích sản',
+  considerSelling:' Cân\nnhắc bán',
+  codeCK: 'Mã Ck',
+  matching:'Khớp',
+  flexibleInvestment:'ĐẦU TƯ NĂNG ĐỘNG',
+  alls:'TỔNG TÀI SẢN'
+
+
+>>>>>>> c1c65c1ebe3cce1e973b347e06040d19ff6df230
 };
 export default vi;

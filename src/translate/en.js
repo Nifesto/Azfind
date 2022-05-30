@@ -9,7 +9,7 @@ const en = {
   changePassword: 'Change Password',
   loginWithFace: 'Login with Face/ Touch ID',
   logOut: 'Logout',
-  wealthPlan: 'WEALTH PLAN',
+  wealthPlan: 'ACCUMULATION PLAN',
   assetsForChildren: 'ASSETS FOR CHILDREN',
   retirement_Assets: 'RETIREMENT ASSETS',
   SavingToBuyACarAndAHouse: 'SAVING TO BUY CAR/HOUSE',
@@ -60,6 +60,7 @@ const en = {
   female: 'Female',
   other: 'Other',
   registration: 'REGISTRATION',
+<<<<<<< HEAD
   accountList: ' Account list',
   customerName: ' Customer name',
   referrerName: 'Referrer name',
@@ -84,5 +85,15 @@ const en = {
   toAccount: 'To the Account',
   content: 'Content',
   password: 'Password',
+=======
+  stopAccumulating: 'Stop\naccumulate',
+  considerSelling: 'Consider\nselling',
+  codeCK: 'Code Ck',
+  matching:'Matching',
+  flexibleInvestment: 'FLEXIBLE INVESTMENT',
+  alls:'ALL',
+
+
+>>>>>>> c1c65c1ebe3cce1e973b347e06040d19ff6df230
 };
 export default en;

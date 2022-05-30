@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   titleInfo: {
     fontFamily: FONT_FAMILY.regular,
-    fontSize: FONTSIZE.f_15,
+    fontSize: FONTSIZE.f_13,
     color: COLOR.BLACK_T,
     textAlign: 'center',
   },

@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './styles';
 import Images from '../../../assets';
 import {COLOR, WIDTH} from '../../../base/core';
+import i18n from '../../../translate/i18n';
 
 const Favorite = () => {
   const [dataStock] = React.useState([
@@ -88,7 +89,7 @@ const Favorite = () => {
               flex: 0.7,
               height: '100%',
             }}>
-            <Text style={styles.titleInfo}>Mã CK</Text>
+            <Text style={styles.titleInfo}>{i18n.t('codeCK')}</Text>
           </View>
           <View
             style={{
@@ -96,7 +97,7 @@ const Favorite = () => {
               flex: 0.7,
               height: '100%',
             }}>
-            <Text style={styles.titleInfo}>Khớp</Text>
+            <Text style={styles.titleInfo}>{i18n.t('matching')}</Text>
           </View>
           <View style={styles.barInfo}>
             <Image
@@ -104,7 +105,7 @@ const Favorite = () => {
               style={{...styles.triangle}}
             />
             <View style={styles.category}>
-              <Text style={styles.titleInfo}>{`Ngừng\ntích sản`}</Text>
+              <Text style={styles.titleInfo}>{i18n.t('stopAccumulating')}</Text>
             </View>
             <Image
               source={Images.iconTriangleRight}
@@ -117,7 +118,7 @@ const Favorite = () => {
               style={{...styles.triangle}}
             />
             <View style={styles.category}>
-              <Text style={styles.titleInfo}>{`Cân nhắc\nbán`}</Text>
+              <Text style={styles.titleInfo}>{i18n.t('considerSelling')}</Text>
             </View>
             <Image
               source={Images.iconTriangleRight}

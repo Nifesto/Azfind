@@ -33,15 +33,16 @@ const styles = StyleSheet.create({
   title_1: {
     color: '#8A8A8A',
     fontSize: FONTSIZE.f_15,
-    width: '30%',
+    width: '32%',
   },
   title_2: {
-    width: WIDTH * 224,
+    width: WIDTH * 244,
     color: '#8A8A8A',
     fontSize: FONTSIZE.f_15,
+    paddingHorizontal: WIDTH * (244 - 230.51),
   },
   input_1: {
-    width: WIDTH * 224,
+    width: WIDTH * 244,
     height: WIDTH * 36,
     borderWidth: 2,
     borderRadius: 20,
@@ -49,16 +50,19 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.f_15,
     textAlignVertical: 'top',
     borderColor: 'rgba(29, 29, 29, 0.24)',
+    paddingHorizontal: WIDTH * (244 - 230.51),
   },
   render: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: WIDTH * 224,
+    justifyContent: 'space-between',
+    width: WIDTH * 244,
+    alignItems: 'center',
+    paddingLeft: WIDTH * (244 - 230.51),
   },
   registration: {
     flexDirection: 'row',
     marginTop: 5,
-    marginHorizontal: (windowWidth * 16) / 428,
+    marginHorizontal: WIDTH * 16,
     alignItems: 'center',
   },
   box: {
@@ -67,6 +71,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 2,
     marginRight: 5,
+    borderColor: '#45B9A4',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -101,6 +106,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginHorizontal: WIDTH * 16,
+    borderColor: '#45B9A4',
   },
   delete: {
     backgroundColor: ' red',

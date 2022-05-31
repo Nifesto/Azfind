@@ -207,7 +207,6 @@ const SetOder = () => {
       four: '16.00',
     },
   ]);
-  console.log(data.length);
   const renderItem = ({item, index}) => {
     return (
       <View
@@ -222,142 +221,149 @@ const SetOder = () => {
       </View>
     );
   };
+  const renderHeader = () => {
+    return (
+      <>
+        <View style={styles.viewHead}>
+          <View style={styles.viewDrop}>
+            <Text>Tích sản nâng cao</Text>
+            <Image source={Images.iconDropUp} style={styles.iconDropUp} />
+          </View>
+          <Text style={styles.info}>Số tài khoản - tên chủ tài khoản</Text>
+        </View>
+        <View style={styles.viewInfo}>
+          <View style={styles.infoCode}>
+            <Text style={styles.textCode}>MÃ CK</Text>
+            <Image source={Images.iconInfo} style={styles.iconInfo} />
+          </View>
+          <View style={styles.btnSearchCode}>
+            <Image source={Images.iconSearch} style={styles.iconSearch} />
+            <Text style={styles.price}>MÃ CK</Text>
+          </View>
+          <View style={styles.btnPriceCode}>
+            <Text style={styles.price}>Giá giao dịch</Text>
+          </View>
+        </View>
+        <View style={styles.containerInfoPrice}>
+          <View style={styles.viewInfoPriceFirst}>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#EB27ED'}}>Trần</Text>
+            </View>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#EB27ED'}}>50.5</Text>
+            </View>
+          </View>
+          <View style={styles.viewInfoPriceFirst}>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>Sàn</Text>
+            </View>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>50.5</Text>
+            </View>
+          </View>
+          <View style={styles.viewInfoPriceFirst}>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#FFD900'}}>TC</Text>
+            </View>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#FFD900'}}>50.5</Text>
+            </View>
+          </View>
+          <View style={{...styles.viewInfoPriceSecond, marginRight: WIDTH * 8}}>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#5A5959'}}>
+                Giá khuyến nghị mua
+              </Text>
+            </View>
+            <View style={styles.priceBuy}>
+              <Text style={{...styles.txtPrice, color: '#EB3027'}}>50.5</Text>
+              <Text style={{...styles.txtPrice, color: '#EB3027'}}>50.5</Text>
+            </View>
+          </View>
+          <View style={styles.viewInfoPriceSecond}>
+            <View style={styles.viewFloor}>
+              <Text style={{...styles.txtPrice, color: '#5A5959'}}>
+                Giá khuyến nghị bán
+              </Text>
+            </View>
+            <View style={styles.priceBuy}>
+              <Text style={{...styles.txtPrice, color: '#46A32F'}}>50.5</Text>
+              <Text style={{...styles.txtPrice, color: '#46A32F'}}>50.5</Text>
+            </View>
+          </View>
+        </View>
+        <View style={styles.containerPurchase}>
+          <View style={{...styles.viewDecrement, marginRight: WIDTH * 31}}>
+            <TouchableOpacity style={styles.btnPlus}>
+              <Image source={Images.iconIncre} style={styles.icon} />
+            </TouchableOpacity>
+            <Text style={styles.plus}>Giá</Text>
+            <TouchableOpacity style={styles.btnPlus}>
+              <Image source={Images.iconDecre} style={styles.icon} />
+            </TouchableOpacity>
+          </View>
+          <View style={{...styles.viewDecrement, marginLeft: WIDTH * 31}}>
+            <TouchableOpacity style={styles.btnPlus}>
+              <Image source={Images.iconIncre} style={styles.icon} />
+            </TouchableOpacity>
+            <Text style={styles.plus}>KL</Text>
+            <TouchableOpacity style={styles.btnPlus}>
+              <Image source={Images.iconDecre} style={styles.icon} />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={styles.containerlimit}>
+          <View style={{...styles.viewLimit, marginRight: WIDTH * 31}}>
+            <Text>Mua tối đa:</Text>
+            <Text>00</Text>
+          </View>
+          <View style={{...styles.viewLimit, marginLeft: WIDTH * 31}}>
+            <Text>Bán tối đa: </Text>
+            <Text>00</Text>
+          </View>
+        </View>
+        <View style={styles.containerAllMoney}>
+          <View style={styles.line} />
+          <View style={styles.sumAll}>
+            <Text>Tổng giá trị</Text>
+            <View style={styles.viewSumMoney}>
+              <Text>62.000.000</Text>
+            </View>
+          </View>
+          <View style={styles.line} />
+          <View style={styles.contaierOrder}>
+            <View style={styles.viewOrder}>
+              <Text style={styles.txtOrder}>Lệnh thường</Text>
+            </View>
+            <View style={styles.viewOrder}>
+              <Text style={styles.txtOrder}>Lệnh 24/7</Text>
+            </View>
+            <View style={styles.viewOrder}>
+              <Text style={styles.txtOrder}>Lệnh GTD</Text>
+            </View>
+            <View style={styles.viewOrder}>
+              <Text style={styles.txtOrder}>Lệnh stop limit</Text>
+            </View>
+          </View>
+          <View style={styles.line} />
+        </View>
+        <View style={styles.containerLabel}>
+          <Text style={styles.label}>KL mua</Text>
+          <Text style={styles.label}>Giá mua</Text>
+          <Text style={styles.label}>Giá bán</Text>
+          <Text style={styles.label}>KL bán</Text>
+        </View>
+      </>
+    );
+  };
   return (
     <View style={styles.container}>
-      <View style={styles.viewHead}>
-        <View style={styles.viewDrop}>
-          <Text>Tích sản nâng cao</Text>
-          <Image source={Images.iconDropUp} style={styles.iconDropUp} />
-        </View>
-        <Text style={styles.info}>Số tài khoản - tên chủ tài khoản</Text>
-      </View>
-      <View style={styles.viewInfo}>
-        <View style={styles.infoCode}>
-          <Text style={styles.textCode}>MÃ CK</Text>
-          <Image source={Images.iconInfo} style={styles.iconInfo} />
-        </View>
-        <View style={styles.btnSearchCode}>
-          <Image source={Images.iconSearch} style={styles.iconSearch} />
-          <Text style={styles.price}>MÃ CK</Text>
-        </View>
-        <View style={styles.btnPriceCode}>
-          <Text style={styles.price}>Giá giao dịch</Text>
-        </View>
-      </View>
-      <View style={styles.containerInfoPrice}>
-        <View style={styles.viewInfoPriceFirst}>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#EB27ED'}}>Trần</Text>
-          </View>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#EB27ED'}}>50.5</Text>
-          </View>
-        </View>
-        <View style={styles.viewInfoPriceFirst}>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>Sàn</Text>
-          </View>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>50.5</Text>
-          </View>
-        </View>
-        <View style={styles.viewInfoPriceFirst}>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#FFD900'}}>TC</Text>
-          </View>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#FFD900'}}>50.5</Text>
-          </View>
-        </View>
-        <View style={{...styles.viewInfoPriceSecond, marginRight: WIDTH * 8}}>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#5A5959'}}>
-              Giá khuyến nghị mua
-            </Text>
-          </View>
-          <View style={styles.priceBuy}>
-            <Text style={{...styles.txtPrice, color: '#EB3027'}}>50.5</Text>
-            <Text style={{...styles.txtPrice, color: '#EB3027'}}>50.5</Text>
-          </View>
-        </View>
-        <View style={styles.viewInfoPriceSecond}>
-          <View style={styles.viewFloor}>
-            <Text style={{...styles.txtPrice, color: '#5A5959'}}>
-              Giá khuyến nghị bán
-            </Text>
-          </View>
-          <View style={styles.priceBuy}>
-            <Text style={{...styles.txtPrice, color: '#46A32F'}}>50.5</Text>
-            <Text style={{...styles.txtPrice, color: '#46A32F'}}>50.5</Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.containerPurchase}>
-        <View style={{...styles.viewDecrement, marginRight: WIDTH * 31}}>
-          <TouchableOpacity style={styles.btnPlus}>
-            <Image source={Images.iconIncre} style={styles.icon} />
-          </TouchableOpacity>
-          <Text style={styles.plus}>Giá</Text>
-          <TouchableOpacity style={styles.btnPlus}>
-            <Image source={Images.iconDecre} style={styles.icon} />
-          </TouchableOpacity>
-        </View>
-        <View style={{...styles.viewDecrement, marginLeft: WIDTH * 31}}>
-          <TouchableOpacity style={styles.btnPlus}>
-            <Image source={Images.iconIncre} style={styles.icon} />
-          </TouchableOpacity>
-          <Text style={styles.plus}>KL</Text>
-          <TouchableOpacity style={styles.btnPlus}>
-            <Image source={Images.iconDecre} style={styles.icon} />
-          </TouchableOpacity>
-        </View>
-      </View>
-      <View style={styles.containerlimit}>
-        <View style={{...styles.viewLimit, marginRight: WIDTH * 31}}>
-          <Text>Mua tối đa:</Text>
-          <Text>00</Text>
-        </View>
-        <View style={{...styles.viewLimit, marginLeft: WIDTH * 31}}>
-          <Text>Bán tối đa: </Text>
-          <Text>00</Text>
-        </View>
-      </View>
-      <View style={styles.containerAllMoney}>
-        <View style={styles.line} />
-        <View style={styles.sumAll}>
-          <Text>Tổng giá trị</Text>
-          <View style={styles.viewSumMoney}>
-            <Text>62.000.000</Text>
-          </View>
-        </View>
-        <View style={styles.line} />
-        <View style={styles.contaierOrder}>
-          <View style={styles.viewOrder}>
-            <Text style={styles.txtOrder}>Lệnh thường</Text>
-          </View>
-          <View style={styles.viewOrder}>
-            <Text style={styles.txtOrder}>Lệnh 24/7</Text>
-          </View>
-          <View style={styles.viewOrder}>
-            <Text style={styles.txtOrder}>Lệnh GTD</Text>
-          </View>
-          <View style={styles.viewOrder}>
-            <Text style={styles.txtOrder}>Lệnh stop limit</Text>
-          </View>
-        </View>
-        <View style={styles.line} />
-      </View>
-      <View style={styles.containerLabel}>
-        <Text style={styles.label}>KL mua</Text>
-        <Text style={styles.label}>Giá mua</Text>
-        <Text style={styles.label}>Giá bán</Text>
-        <Text style={styles.label}>KL bán</Text>
-      </View>
       <View style={{flex: 1}}>
         <FlatList
           data={data}
           keyExtractor={(_, index) => index.toString()}
           renderItem={renderItem}
+          ListHeaderComponent={renderHeader}
         />
       </View>
       <View style={styles.foot}>

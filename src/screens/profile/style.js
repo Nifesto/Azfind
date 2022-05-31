@@ -1,4 +1,8 @@
-import {StyleSheet, Platform, StatusBar} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {Dimensions} from 'react-native';
+const windowWidth = Dimensions.get('window').width / 100;
+const windowHeight = Dimensions.get('window').height / 100;
+const {width, height} = Dimensions.get('window');
 import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
@@ -7,8 +11,8 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: COLOR.MAIN_P,
-    height: WIDTH * 92,
-    paddingTop: Platform.OS === 'ios' ? WIDTH * 30 : StatusBar.currentHeight,
+    height: WIDTH * 90,
+    paddingTop: WIDTH * 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -30,9 +34,8 @@ const styles = StyleSheet.create({
     paddingVertical: WIDTH * 6,
   },
   name: {
-    color:COLOR.BLACK_P,
+    color: '#222',
     fontSize: FONTSIZE.f_19,
-    fontFamily: FONT_FAMILY.regular
   },
   title_OTP: {
     fontSize: FONTSIZE.f_16,
@@ -64,7 +67,6 @@ const styles = StyleSheet.create({
     marginBottom: WIDTH * 2,
   },
   iconDropUp: {
-    flex:1,
     width: WIDTH * 15,
     height: WIDTH * 9,
     resizeMode: 'contain',
@@ -78,17 +80,14 @@ const styles = StyleSheet.create({
   content: {
     fontSize: FONTSIZE.f_12,
     color: COLOR.BLACK_P,
-    fontFamily: FONT_FAMILY.regular
   },
   text: {
     fontSize: FONTSIZE.f_12,
-    color: COLOR.MAIN_P,
-    fontFamily: FONT_FAMILY.regular
+    color: '#222',
   },
   text1: {
     fontSize: FONTSIZE.f_12,
     color: COLOR.BLACK_P,
-    fontFamily: FONT_FAMILY.regular
   },
   language: {
     fontSize: FONTSIZE.f_11,

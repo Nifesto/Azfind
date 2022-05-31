@@ -116,9 +116,9 @@ const Home = ({navigation}) => {
           />
           <Item
             src={Images.iconChangeMoney}
-            content={'Nộp/\nRútTiền'}
+            content={'Nộp\nRútTiền'}
             onPress={() => {
-              navigation.navigate('OpenAccount');
+              navigation.navigate('PaymentSreen');
             }}
           />
           <Item

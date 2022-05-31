@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import styles from './style';
 import Images from '../../../assets';
+import i18n from 'i18n-js';
 const ChangeMoney = () => {
   const [number, onChangeNumber] = React.useState('');
   const [accBank, onChangeAccBank] = React.useState('');
@@ -19,7 +20,7 @@ const ChangeMoney = () => {
       <ScrollView>
         <View style={styles.body}>
           <View style={styles.main}>
-            <Text style={styles.title}>LOẠI GIAO DỊCH</Text>
+            <Text style={styles.title}>{i18n.t('transactionType')}</Text>
             <View style={styles.content}>
               <Text style={styles.text}>Chuyển tiền ra ngân hàng</Text>
               <TouchableOpacity>
@@ -28,7 +29,7 @@ const ChangeMoney = () => {
             </View>
           </View>
           <View style={styles.main}>
-            <Text style={styles.title}>TỪ TÀI KHOẢN</Text>
+            <Text style={styles.title}>{i18n.t('fromAccount')}</Text>
             <View style={styles.content}>
               <Text style={styles.text}>Số tài khoản</Text>
               <TouchableOpacity>
@@ -41,7 +42,7 @@ const ChangeMoney = () => {
             <Text style={styles.text_ex}>Tiền từ sức mua: 302.456.340 đ </Text>
           </View>
           <View style={styles.main}>
-            <Text style={styles.title}>ĐẾN TÀI KHOẢN</Text>
+            <Text style={styles.title}>{i18n.t('toAccount')}</Text>
             <TextInput
               onChangeText={onChangeAccBank}
               value={accBank}
@@ -50,7 +51,7 @@ const ChangeMoney = () => {
             />
           </View>
           <View style={styles.main}>
-            <Text style={styles.title}>SỐ TIỀN CHUYỂN</Text>
+            <Text style={styles.title}>{i18n.t('transferAmount')}</Text>
             <TextInput
               onChangeText={onChangeNumber}
               value={number}
@@ -58,7 +59,7 @@ const ChangeMoney = () => {
               style={styles.input}
             />
           </View>
-          <Text style={styles.title}>NỘI DUNG</Text>
+          <Text style={styles.title}>{i18n.t('content')}</Text>
           <TextInput
             onChangeText={onChangeContent}
             value={content}
@@ -67,7 +68,7 @@ const ChangeMoney = () => {
             style={styles.input2}
           />
           <View style={styles.main}>
-            <Text style={styles.title}>MẬT KHẨU</Text>
+            <Text style={styles.title}>{i18n.t('password')}</Text>
             <TextInput
               onChangeText={onChangePass}
               value={pass}

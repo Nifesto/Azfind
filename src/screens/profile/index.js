@@ -11,6 +11,7 @@ import ModalTwoButton from '../../component/modalTwoButton';
 import ModalRegister from '../../component/modalRegisterSuccess';
 import ModalRequets from '../../component/modalRequest';
 import ModalChangePassword from '../../component/modalChangePassword';
+import {COLOR} from '../../base/core';
 const Profile = ({navigation}) => {
   const [lang, setLang] = React.useState('');
   const {t} = i18n;
@@ -63,10 +64,11 @@ const Profile = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
+        <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
         {check && (
           <View style={styles.information}>
             <View style={styles.infor}>
-              <Text style={styles.content}>danh sách tài khoản</Text>
+              <Text style={styles.content}>{t('accountList')}</Text>
               <View style={styles.acc_extra}>
                 <Text style={styles.text1}>Tích sản hưu trí - 0337577469</Text>
                 <TouchableOpacity
@@ -80,31 +82,31 @@ const Profile = ({navigation}) => {
               </View>
             </View>
             <View style={styles.infor}>
-              <Text style={styles.content}>Tên khách hàng</Text>
+              <Text style={styles.content}>{t('customerName')}</Text>
               <Text style={styles.text}>Nguyễn văn A</Text>
             </View>
             <View style={styles.infor}>
-              <Text style={styles.content}>Người giới thiệu</Text>
+              <Text style={styles.content}>{t('referrerName')}</Text>
               <Text style={styles.text}>Nguyễn Trường Giang</Text>
             </View>
             <View style={styles.infor}>
-              <Text style={styles.content}>Số lưu kí</Text>
+              <Text style={styles.content}>{t('depositoryNumber')}</Text>
               <Text style={styles.text}>190333564997</Text>
             </View>
             <View style={styles.infor}>
-              <Text style={styles.content}>CMND</Text>
+              <Text style={styles.content}>{t('identityCardNumber')}</Text>
               <Text style={styles.text}>0300559974325</Text>
             </View>
             <View style={styles.infor}>
-              <Text style={styles.content}>Email</Text>
+              <Text style={styles.content}>{t('email')}</Text>
               <Text style={styles.text}>hotenxx09@gmail.com</Text>
             </View>
             <View style={styles.infor}>
-              <Text style={styles.content}>Số điện thoại</Text>
+              <Text style={styles.content}>{t('phoneNumber')}</Text>
               <Text style={styles.text}>0335574469</Text>
             </View>
             <View style={{...styles.infor, marginBottom: 0}}>
-              <Text style={styles.content}>Địa chỉ</Text>
+              <Text style={styles.content}>{t('address')}</Text>
               <Text style={styles.text}>
                 381 Nguyên Khang, Yên Hòa, Cầu Giấy, Hà Nội
               </Text>
@@ -122,9 +124,10 @@ const Profile = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
+        <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
         {check1 && (
           <View style={styles.show}>
-            <Text style={styles.language}> Ngôn ngữ</Text>
+            <Text style={styles.language}>{t('language')}</Text>
             <TouchableOpacity onPress={changeLanguageToVN}>
               <Image style={styles.icon_language} source={Images.iconVN} />
             </TouchableOpacity>
@@ -146,8 +149,9 @@ const Profile = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
+        <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
         <View style={styles.form}>
-          <Form source={Images.iconLoginBy} title={t('loginWithFace')} />
+          <Form source={Images.iconLoginBy} title={t('loginByFace')} />
           <TouchableOpacity
             onPress={() => setCheck3(!check3)}
             style={styles.btnShow}>
@@ -157,9 +161,10 @@ const Profile = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
+        <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
         {check3 && (
           <View style={styles.show}>
-            <Text style={styles.language}>Đăng nhập bằng Face/ Touch ID</Text>
+            <Text style={styles.language}>{t('loginByFace')}s</Text>
             <TouchableOpacity
               onPress={() => setCheck4(!check4)}
               style={styles.icon_languages}>
@@ -175,6 +180,7 @@ const Profile = ({navigation}) => {
             <Form source={Images.iconLogOut} title={t('logOut')} />
           </TouchableOpacity>
         </View>
+        <View style={{height: 3, backgroundColor: COLOR.WHITE_P}} />
       </View>
       {/* <ModalView
         isShow={visible}

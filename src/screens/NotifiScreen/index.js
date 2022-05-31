@@ -6,6 +6,7 @@ import {COLOR, HEIGHT, WIDTH, WIDTH_WINDOW} from '../../base/core';
 import Command from './Command';
 import Account from './account';
 import News from './News';
+import styles from './styles';
 
 const Notification = ({navigation}) => {
   const refScroll = React.useRef(null);
@@ -36,15 +37,7 @@ const Notification = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: COLOR.WHITE_P}}>
       <Header title={'Thông báo'} btnLeft={() => navigation.goBack()} />
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          backgroundColor: '#FFFFFF',
-          marginHorizontal: WIDTH * 16,
-          width: WIDTH_WINDOW,
-          justifyContent: 'space-between',
-        }}>
+      <View style={styles.header}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {title.map((item, index) => {
             return (
@@ -52,12 +45,8 @@ const Notification = ({navigation}) => {
                 key={index}
                 onPress={() => onPress(item, index)}
                 style={{
-                  borderBottomColor: COLOR.MAIN_P,
+                  ...styles.button,
                   borderBottomWidth: index === choose ? 1 : 0,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: (WIDTH_WINDOW - WIDTH * 32) / 3,
-                  paddingVertical: WIDTH * 8,
                 }}>
                 <Text
                   style={{

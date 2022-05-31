@@ -8,7 +8,11 @@ import {
 } from '../../../base/core';
 
 const styles = StyleSheet.create({
-  container: {flex: 1, backgroundColor: '#F1F1F1', width: WIDTH_WINDOW},
+  container: {
+    flex: 1,
+    backgroundColor: '#F1F1F1',
+    width: WIDTH_WINDOW,
+  },
   stt: {
     color: '#222',
   },

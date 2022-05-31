@@ -32,7 +32,7 @@ const News = () => {
         'Lễ ký kết thỏa thuận hợp tác giữa VMO Holdings Tech.,JSC và AzFin Việt Nam',
       time: '12.45',
       date: '03/07/2002',
-    },
+    }, 
     {
       img: Images.iconNews,
       title:

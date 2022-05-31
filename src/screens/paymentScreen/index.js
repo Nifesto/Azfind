@@ -12,17 +12,20 @@ import Payment from './payment';
 import ChangeMoney from './changeMoney';
 import styles from './style';
 import Images from '../../assets';
+import Drawer from '../../navigation/drawer';
+import i18n from 'i18n-js';
 
-const PaymentSreen = () => {
+const PaymentSreen = ({navigation}) => {
+  const [visible, setVisible] = React.useState(false);
   const refScroll = React.useRef(null);
   const [choose, setChoose] = React.useState(0);
   const [title, setTitle] = React.useState([
     {
-      name: 'NỘP TIỀN',
+      name: i18n.t('payment'),
       choose: true,
     },
     {
-      name: 'CHUYỂN TIỀN',
+      name: i18n.t('transfers'),
       choose: false,
     },
   ]);
@@ -38,15 +41,20 @@ const PaymentSreen = () => {
   return (
     <View style={{flex: 1, backgroundColor: COLOR.WHITE_P}}>
       <View style={styles.header}>
-        <Image style={styles.iconBack} source={Images.iconBack} />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image style={styles.iconBack} source={Images.iconBack} />
+        </TouchableOpacity>
         <View style={styles.header_right}>
-          <Image style={styles.iconBell} source={Images.iconBell} />
+          <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+            <Image style={styles.iconBell} source={Images.iconBell} />
+          </TouchableOpacity>
           <Text style={styles.number}>1</Text>
-          <Image style={styles.iconMore} source={Images.iconMore} />
+          <TouchableOpacity onPress={() => setVisible(true)}>
+            <Image style={styles.iconMore} source={Images.iconMore} />
+          </TouchableOpacity>
         </View>
       </View>
-      <View
-        style={styles.body}>
+      <View style={styles.body}>
         <View style={styles.switch}>
           {title.map((item, index) => {
             return (
@@ -97,6 +105,9 @@ const PaymentSreen = () => {
           <Payment />
           <ChangeMoney />
         </ScrollView>
+      </View>
+      <View>
+        <Drawer visible={visible} close={() => setVisible(false)} />
       </View>
     </View>
   );

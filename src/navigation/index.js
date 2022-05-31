@@ -31,6 +31,7 @@ import Register from '../screens/AuthStack/registerScreen';
 import ForgetPass from '../screens/AuthStack/forgetPassword';
 import ConfirmPass from '../screens/AuthStack/confirmPass';
 import Notification from '../screens/NotifiScreen';
+import PaymentSreen from '../screens/paymentScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -215,6 +216,11 @@ const AppNavigation = () => {
             options={{headerShown: false}}
             name="Notification"
             component={Notification}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="PaymentSreen"
+            component={PaymentSreen}
           />
         </Stack.Navigator>
       )}

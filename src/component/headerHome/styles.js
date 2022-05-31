@@ -5,9 +5,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: COLOR.MAIN_P,
     height: WIDTH * 92,
-    // paddingTop: WIDTH * 30,
     paddingTop: Platform.OS === 'ios' ? WIDTH * 30 : StatusBar.currentHeight,
-
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

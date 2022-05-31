@@ -3,7 +3,7 @@ import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F1F1F1',
   },
   header: {
     backgroundColor: COLOR.MAIN_P,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   form: {
     flexDirection: 'row',
-    backgroundColor: '#E5E5E5',
+    backgroundColor: '#F1F1F1',
     marginBottom: WIDTH * 2,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: WIDTH * 16,
     justifyContent: 'space-between',
-    paddingVertical: WIDTH * 7,
-    marginBottom: WIDTH * 2,
+    paddingVertical: WIDTH * 10,
+    marginBottom: WIDTH * 1,
   },
   iconDropUp: {
     flex:1,
@@ -117,6 +117,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: WIDTH * 11,
     paddingTop: WIDTH * 11,
+    backgroundColor: COLOR.WHITE_P,
   },
   acc_extra: {
     flexDirection: 'row',

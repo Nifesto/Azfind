@@ -11,20 +11,21 @@ import {
 import styles from './style';
 import Images from '../../../assets';
 import {FONT_FAMILY} from '../../../base/core';
+import i18n from 'i18n-js';
 const Payment = () => {
   const [text, onChangeText] = React.useState('');
   return (
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.body}>
-          <Text style={styles.title}>Tiểu khoản nộp tiền</Text>
+          <Text style={styles.title}>{i18n.t('paymentAccount')}</Text>
           <View style={styles.choose}>
             <Text numberOfLines={1}>Tích sản cho con - 045632566xxx5767</Text>
             <TouchableOpacity>
               <Image style={styles.iconDropdown} source={Images.iconDropdown} />
             </TouchableOpacity>
           </View>
-          <Text style={styles.title}>Chọn ngân hàng thụ hưởng</Text>
+          <Text style={styles.title}>{i18n.t('chooseBeneficiaryBank')}</Text>
           <View style={styles.choose}>
             <Text numberOfLines={1}>Ngân hàng thụ hưởng</Text>
             <TouchableOpacity>
@@ -37,7 +38,7 @@ const Payment = () => {
               fontFamily: FONT_FAMILY.bold,
               color: '#0E448A',
             }}>
-            SỐ TÀI KHOẢN HƯỞNG THỤ
+          {i18n.t('beneficiaryAccountNumber')}
           </Text>
           <View style={styles.choose}>
             <Text numberOfLines={1}>121554123450145</Text>
@@ -51,7 +52,7 @@ const Payment = () => {
               fontFamily: FONT_FAMILY.bold,
               color: '#0E448A',
             }}>
-            TÊN ĐƠN VỊ HƯỞNG THỤ
+        {i18n.t('beneficiaryName')}
           </Text>
           <View style={styles.choose}>
             <Text numberOfLines={1}>CTCP CHUNG KHOAN ANPHA</Text>
@@ -66,7 +67,7 @@ const Payment = () => {
               fontFamily: FONT_FAMILY.bold,
               color: '#0E448A',
             }}>
-            NỘI DUNG CHUYỂN KHOẢN
+           {i18n.t('transferContents')}
           </Text>
           <View style={styles.input}>
             <TextInput

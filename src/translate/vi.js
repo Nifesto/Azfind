@@ -68,7 +68,7 @@ const vi = {
   email: 'Email',
   phoneNumber: 'Số điện thoại',
   address: 'Địa chỉ',
-  language: ' Ngôn ngữ',
+  language: ' Ngôn ngữ',  
   notification: 'Thông báo',
   command: ' Lệnh',
   account: 'Tài khoản',

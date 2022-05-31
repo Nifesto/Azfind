@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: WIDTH_WINDOW,
+    paddingBottom: WIDTH * 75,
   },
   icon: {
     width: WIDTH * 13,
@@ -39,6 +40,42 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'right',
     paddingRight: WIDTH * 14,
+  },
+  itemShow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: WIDTH * 16,
+    backgroundColor: COLOR.WHITE_P,
+    alignItems: 'center',
+    paddingVertical: WIDTH * 8,
+  },
+  viewStock: {
+    flexDirection: 'row',
+    paddingHorizontal: WIDTH * 16,
+    backgroundColor: COLOR.WHITE_P,
+    paddingVertical: WIDTH * 8,
+  },
+  labelStock: {
+    width: (WIDTH_WINDOW - WIDTH * 32) / 6,
+    textAlign: 'center',
+    fontFamily: FONT_FAMILY.regular,
+    fontSize: FONTSIZE.f_15,
+    color: '#404040',
+  },
+  status: {
+    color: COLOR.MAIN_P,
+    fontFamily: FONT_FAMILY.bold,
+    fontSize: FONTSIZE.f_12,
+    marginLeft: WIDTH * 20,
+    marginVertical: WIDTH * 9,
+  },
+  lineStock: {
+    height: 4,
+    backgroundColor: '#F4F4F4',
+  },
+  itemSep: {
+    height: 2,
+    backgroundColor: '#F4F4F4',
   },
 });
 export default styles;

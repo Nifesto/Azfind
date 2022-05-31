@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
 
   title: {
     color: '#8A8A8A',
-    fontSize: FONTSIZE.f_14,
+    fontSize: FONTSIZE.f_15,
   },
   input_1: {
-    paddingHorizontal: 10,
+    paddingHorizontal: WIDTH * (244 - 230.51),
     color: 'rgba(29, 29, 29, 0.51)',
     fontSize: 15,
-    width: WIDTH * 224,
+    width: WIDTH * 244,
     height: WIDTH * 36,
     borderWidth: 2,
     borderRadius: 20,

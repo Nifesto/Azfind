@@ -15,6 +15,7 @@ import InfoAcc from './infoAcc/index';
 import Images from './../../assets/index';
 import Header from '../../component/header';
 import i18n from '../../translate/i18n';
+import {COLOR, FONTSIZE, FONT_FAMILY, WIDTH} from '../../base/core';
 const OpenAccount = ({navigation}) => {
   const [count, setCount] = React.useState(0);
   const onPress = () => setCount(prevCount => prevCount + 1);
@@ -108,7 +109,9 @@ const OpenAccount = ({navigation}) => {
           <View style={styles.render}>
             {render.map((item, index) => {
               return (
-                <View style={{flexDirection: 'row'}} key={item.id}>
+                <View
+                  style={{flexDirection: 'row', alignItems: 'center'}}
+                  key={item.id}>
                   <TouchableOpacity
                     style={
                       item.choose
@@ -184,8 +187,7 @@ const OpenAccount = ({navigation}) => {
           />
         </View>
         <Line />
-        <Text style={styles.title_3}> {i18n.t('registerService')}</Text>
-
+        <Text style={styles.title_3}>{i18n.t('registerService')}</Text>
         <View style={styles.registration}>
           <TouchableOpacity
             onPress={onPress_1}
@@ -200,13 +202,11 @@ const OpenAccount = ({navigation}) => {
             />
           </TouchableOpacity>
           <Text style={styles.title}>
-            {' '}
             {i18n.t('SignUpForMarginTradingService')}
           </Text>
         </View>
         <Line />
         <Text style={styles.title_3}>
-          {' '}
           {i18n.t('informationOfBankIsAccount')}
         </Text>
         <View
@@ -218,7 +218,7 @@ const OpenAccount = ({navigation}) => {
           <Text
             style={{
               ...styles.title,
-              marginRight: 20,
+              marginRight: 10,
             }}>
             {i18n.t('fullName')} <Text style={{color: 'red'}}>*</Text>
           </Text>
@@ -232,7 +232,7 @@ const OpenAccount = ({navigation}) => {
           {i18n.t('bank')} <Text style={{color: 'red'}}>*</Text>
         </Text>
         <View style={styles.bank}>
-          <Text style={{...styles.title, fontSize: 18}}>
+          <Text style={{...styles.title}}>
             Techcombank - Ngân hàng Kỹ Thương Việt Nam
           </Text>
           <TouchableOpacity style={styles.delete}>
@@ -244,10 +244,7 @@ const OpenAccount = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.bank}>
-          <Text style={{...styles.title, fontSize: 18}}>
-            {' '}
-            {i18n.t('branch')}
-          </Text>
+          <Text style={{...styles.title}}>{i18n.t('branch')}</Text>
 
           <TouchableOpacity>
             <Image

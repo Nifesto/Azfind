@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.f_15,
     color: '#737373',
     textAlign: 'center',
+    marginLeft: WIDTH * 5,
   },
   //
   containerItem: {

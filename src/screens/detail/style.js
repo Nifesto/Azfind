@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingVertical: WIDTH *17
+    paddingVertical: WIDTH * 17,
   },
   textValue: {
     fontSize: FONTSIZE.f_35,
@@ -89,11 +89,12 @@ const styles = StyleSheet.create({
     marginLeft: WIDTH * 3,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: WIDTH *9.2
+    paddingVertical: WIDTH * 9.2,
   },
   textChange: {
     fontSize: FONTSIZE.f_15,
     fontFamily: FONT_FAMILY.regular,
+    color: COLOR.BLACK_P,
   },
   top_right: {
     flex: 2,
@@ -103,11 +104,12 @@ const styles = StyleSheet.create({
     marginLeft: WIDTH * 3,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: WIDTH *11.4
+    paddingVertical: WIDTH * 11.4,
   },
   textTop_right: {
     fontSize: FONTSIZE.f_12,
     fontFamily: FONT_FAMILY.bold,
+    color: COLOR.BLACK_P,
   },
   body_top: {
     flexDirection: 'row',
@@ -151,7 +153,6 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     marginTop: WIDTH * 3,
-  
   },
   content: {
     flexDirection: 'row',
@@ -164,13 +165,13 @@ const styles = StyleSheet.create({
     marginRight: WIDTH * 3,
     backgroundColor: COLOR.WHITE_P,
     paddingHorizontal: WIDTH * 16,
-    paddingVertical: WIDTH *8
+    paddingVertical: WIDTH * 8,
   },
   footer_right: {
     flex: 1,
     backgroundColor: COLOR.WHITE_P,
     paddingHorizontal: WIDTH * 15,
-    paddingVertical: WIDTH *8
+    paddingVertical: WIDTH * 8,
   },
 });
 

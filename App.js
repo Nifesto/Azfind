@@ -7,7 +7,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ASYN} from './src/base/core';
 import {changeLanguage} from './src/redux/reducer/reducerLanguage';
 import i18n from './src/translate/i18n';
+import SplashScreen from 'react-native-splash-screen';
 const App = () => {
+  SplashScreen.hide();
   return (
     <Provider store={store}>
       <View style={{flex: 1}}>

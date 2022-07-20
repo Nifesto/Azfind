@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
   cmd: {
     fontFamily: FONT_FAMILY.regular,
     fontSize: FONTSIZE.f_12,
+    color: COLOR.BLACK_P
   },
   quantity: {
     color: COLOR.BLACK_P,
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.f_12,
   },
   brand: {
-    color: '#0E448A',
+    color: COLOR.MAIN_P,
     fontFamily: FONT_FAMILY.regular,
     fontSize: FONTSIZE.f_12,
   },

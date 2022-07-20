@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   money: {
     color: 'red',
     fontSize: FONTSIZE.f_12,
+    fontFamily: FONT_FAMILY.regular
   },
   title: {
     color: COLOR.BLACK_P,

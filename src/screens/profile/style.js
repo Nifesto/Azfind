@@ -34,17 +34,19 @@ const styles = StyleSheet.create({
     paddingVertical: WIDTH * 6,
   },
   name: {
-    color: '#222',
+    fontFamily:FONT_FAMILY.regular,
     fontSize: FONTSIZE.f_19,
+    color: COLOR.BLACK_P
   },
   title_OTP: {
     fontSize: FONTSIZE.f_16,
-    color: '#222',
+    color: COLOR.BLACK_P,
+    fontFamily:FONT_FAMILY.regular,
   },
   OTP: {
     fontSize: FONTSIZE.f_16,
-    color: '#222',
-    fontWeight: '700',
+    color: COLOR.BLACK_P,
+    fontFamily: FONT_FAMILY.bold,
   },
   information: {
     backgroundColor: '#F1F1F1',
@@ -80,14 +82,17 @@ const styles = StyleSheet.create({
   content: {
     fontSize: FONTSIZE.f_12,
     color: COLOR.BLACK_P,
+    fontFamily: FONT_FAMILY.regular
   },
   text: {
     fontSize: FONTSIZE.f_12,
-    color: '#222',
+    color: COLOR.BLACK_P,
+    fontFamily: FONT_FAMILY.regular
   },
   text1: {
     fontSize: FONTSIZE.f_12,
     color: COLOR.BLACK_P,
+    fontFamily: FONT_FAMILY.regular
   },
   language: {
     fontSize: FONTSIZE.f_11,

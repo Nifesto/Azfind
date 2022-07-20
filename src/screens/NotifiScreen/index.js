@@ -7,21 +7,21 @@ import Command from './Command';
 import Account from './account';
 import News from './News';
 import styles from './styles';
-
+import i18n from '../../translate/i18n';
 const Notification = ({navigation}) => {
   const refScroll = React.useRef(null);
   const [choose, setChoose] = React.useState(0);
   const [title, setTitle] = React.useState([
     {
-      name: 'Lệnh',
+      name: i18n.t('command'),
       choose: true,
     },
     {
-      name: 'Tài khoản',
+      name:  i18n.t('account'),
       choose: false,
     },
     {
-      name: 'Tin tức',
+      name:  i18n.t('news'),
       choose: false,
     },
   ]);
@@ -33,10 +33,9 @@ const Notification = ({navigation}) => {
       animate: true,
     });
   };
-
   return (
     <View style={{flex: 1, backgroundColor: COLOR.WHITE_P}}>
-      <Header title={'Thông báo'} btnLeft={() => navigation.goBack()} />
+      <Header title={i18n.t('notification')} btnLeft={() => navigation.goBack()} />
       <View style={styles.header}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {title.map((item, index) => {

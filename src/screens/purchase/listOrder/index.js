@@ -5,13 +5,14 @@ import styles from './styles';
 import OrderCondition from './orderCondition';
 import OrderNomal from './orderNomal';
 import {COLOR, WIDTH_WINDOW} from '../../../base/core';
+import i18n from '../../../translate/i18n';
 const ListOrder = () => {
   const [choose, setChoose] = React.useState(0);
   const refScroll = React.useRef();
   const [title] = React.useState([
-    {name: 'Lệnh thường'},
+    {name: i18n.t('normalCommand')},
     {
-      name: 'Lệnh điều kiện',
+      name: i18n.t('conditionalCommand'),
     },
   ]);
   const onPress = (item, index) => {

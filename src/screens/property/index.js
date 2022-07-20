@@ -1,9 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import {
-  StyleSheet,
   Text,
   View,
-  Image,
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
@@ -14,14 +12,15 @@ import {COLOR, WIDTH_WINDOW} from '../../base/core';
 import PropertyTab from './propertyTab';
 import CategoryTab from './categoryTab';
 import Drawer from '../../navigation/drawer';
+import i18n from '../../translate/i18n';
 const Property = ({navigation}) => {
   const [visible, setVisible] = React.useState(false);
   const [choose, setChoose] = React.useState(0);
   const refScroll = React.useRef();
   const [title, setTitle] = useState([
-    {name: 'Tài sản'},
+    {name: i18n.t('assets')},
     {
-      name: 'Danh mục',
+      name:  i18n.t('category'),
     },
   ]);
   const onPress = (item, index) => {
@@ -53,11 +52,11 @@ const Property = ({navigation}) => {
             </TouchableOpacity>
           );
         })}
-      </View>
+      </View> 
       <View style={styles.viewRegister}>
-        <Text style={styles.txtRegis}>ĐĂNG KÝ ĐẦU TƯ TỰ ĐỘNG</Text>
+        <Text style={styles.txtRegis}>{i18n.t('autoRegister')}</Text>
         <TouchableOpacity style={styles.btnRegister}>
-          <Text style={styles.txtRegister}>ĐĂNG KÝ</Text>
+          <Text style={styles.txtRegister}>{i18n.t('register')}</Text>
         </TouchableOpacity>
       </View>
       <View style={{flex: 1}}>

@@ -102,28 +102,28 @@ const Home = ({navigation}) => {
         <View style={styles.bar}>
           <Item
             src={Images.iconHand}
-            content={'Kế hoạch\ntích sản'}
+            content={i18n.t('wealthPlan')}
             onPress={() => {
               navigation.navigate('Form');
             }}
           />
           <Item
             src={Images.iconHat}
-            content={'Học tập'}
+            content={i18n.t('study')}
             onPress={() => {
               navigation.navigate('KeyOpen');
             }}
           />
           <Item
             src={Images.iconChangeMoney}
-            content={'Nộp\nRútTiền'}
+            content={i18n.t('depositvswithdrawMoney')}
             onPress={() => {
               navigation.navigate('PaymentSreen');
             }}
           />
           <Item
             src={Images.iconNews}
-            content={'Tin trong\nngày'}
+            content={i18n.t('newsOfTheDay')}
             onPress={() => {
               i18n.locale = 'en';
               dispatch(changeLanguage('en'));
@@ -138,7 +138,7 @@ const Home = ({navigation}) => {
             }}
           />
         </View>
-        <Text style={styles.title}>Bảng giá tích sản</Text>
+        <Text style={styles.title}>{i18n.t('productPriceList')}</Text>
         <View style={styles.barTopInfo}>
           <View
             style={{

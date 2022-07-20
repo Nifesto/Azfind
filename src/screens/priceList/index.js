@@ -14,6 +14,7 @@ import {COLOR, WIDTH_WINDOW} from '../../base/core';
 import Drawer from '../../navigation/drawer';
 import Favorite from './favorite';
 import Stock from './stock';
+import i18n from '../../translate/i18n';
 const ItemHeader = ({item}) => {
   return (
     <View style={styles.viewItem}>
@@ -57,9 +58,9 @@ const PriceList = ({navigation}) => {
   const [choose, setChoose] = React.useState(0);
   const refScroll = React.useRef();
   const [title, setTitle] = React.useState([
-    {name: 'Yêu thích'},
+    {name: i18n.t('favourite')},
     {
-      name: 'Cổ phiếu',
+      name: i18n.t('stock'),
     },
   ]);
   const onPress = (item, index) => {

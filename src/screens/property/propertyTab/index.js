@@ -58,24 +58,24 @@ const PropertyTab = () => {
         />
         {checkAll && (
           <View>
-            {ItemShowEven('Giá trị tài sản ròng', '1000000')}
-            {ItemShowOdd('Giá trị thị trường của CK', '1000000')}
-            {ItemShowEven('Giá trị chứng khoán quyền ', '1000000')}
-            {ItemShowOdd('Số dư tiền có trong tài khoản', '1000000')}
-            {ItemShowEven('Tiền chở về', '1000000')}
-            {ItemShowOdd('Tiền tối đa được ứng trước', '1000000')}
-            {ItemShowEven('Cổ tức tiền', '1000000')}
-            {ItemShowOdd('Tiền rút được', '1000000')}
-            {ItemShowEven('Nợ', '1000000')}
+            {ItemShowEven(i18n.t('netAssetValue'), '1000000')}
+            {ItemShowOdd(i18n.t('fieldValue'), '1000000')}
+            {ItemShowEven(i18n.t('stockValue'), '1000000')}
+            {ItemShowOdd(i18n.t('balanceInTheAccount'), '1000000')}
+            {ItemShowEven(i18n.t('waitingMoney'), '1000000')}
+            {ItemShowOdd(i18n.t('maximumAmountAdvance'), '1000000')}
+            {ItemShowEven(i18n.t('dividend'), '1000000')}
+            {ItemShowOdd(i18n.t('withdrawableMoney'), '1000000')}
+            {ItemShowEven(i18n.t('debt'), '1000000')}
             {ItemShowOdd('Rtt')}
-            <Text style={styles.status}>TRẠNGN THÁI CHỨNG KHOÁN</Text>
+            <Text style={styles.status}>{i18n.t('stockStt')}</Text>
             <View style={styles.viewStock}>
-              <Text style={styles.labelStock}>Mã</Text>
-              <Text style={styles.labelStock}>GD</Text>
-              <Text style={styles.labelStock}>Chờ GD</Text>
-              <Text style={styles.labelStock}>Chờ về</Text>
-              <Text style={styles.labelStock}>Ký quỹ</Text>
-              <Text style={styles.labelStock}>Tổng</Text>
+              <Text style={styles.labelStock}>{i18n.t('code')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('transaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('waitTransaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('wait')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('deposit')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('total')}</Text>
             </View>
             <View style={styles.lineStock} />
             {data.map((item, index) => {
@@ -102,24 +102,24 @@ const PropertyTab = () => {
         />
         {checkRetied && (
           <View>
-            {ItemShowEven('Giá trị tài sản ròng', '1000000')}
-            {ItemShowOdd('Giá trị thị trường của CK', '1000000')}
-            {ItemShowEven('Giá trị chứng khoán quyền ', '1000000')}
-            {ItemShowOdd('Số dư tiền có trong tài khoản', '1000000')}
-            {ItemShowEven('Tiền chở về', '1000000')}
-            {ItemShowOdd('Tiền tối đa được ứng trước', '1000000')}
-            {ItemShowEven('Cổ tức tiền', '1000000')}
-            {ItemShowOdd('Tiền rút được', '1000000')}
-            {ItemShowEven('Nợ', '1000000')}
+          {ItemShowEven(i18n.t('netAssetValue'), '1000000')}
+            {ItemShowOdd(i18n.t('fieldValue'), '1000000')}
+            {ItemShowEven(i18n.t('stockValue'), '1000000')}
+            {ItemShowOdd(i18n.t('balanceInTheAccount'), '1000000')}
+            {ItemShowEven(i18n.t('waitingMoney'), '1000000')}
+            {ItemShowOdd(i18n.t('maximumAmountAdvance'), '1000000')}
+            {ItemShowEven(i18n.t('dividend'), '1000000')}
+            {ItemShowOdd(i18n.t('withdrawableMoney'), '1000000')}
+            {ItemShowEven(i18n.t('debt'), '1000000')}
             {ItemShowOdd('Rtt')}
             <Text style={styles.status}>TRẠNGN THÁI CHỨNG KHOÁN</Text>
             <View style={styles.viewStock}>
-              <Text style={styles.labelStock}>Mã</Text>
-              <Text style={styles.labelStock}>GD</Text>
-              <Text style={styles.labelStock}>Chờ GD</Text>
-              <Text style={styles.labelStock}>Chờ về</Text>
-              <Text style={styles.labelStock}>Ký quỹ</Text>
-              <Text style={styles.labelStock}>Tổng</Text>
+            <Text style={styles.labelStock}>{i18n.t('code')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('transaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('waitTransaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('wait')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('deposit')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('total')}</Text>
             </View>
             <View style={styles.lineStock} />
             {data.map((item, index) => {
@@ -146,24 +146,24 @@ const PropertyTab = () => {
         />
         {checkChild && (
           <View>
-            {ItemShowEven('Giá trị tài sản ròng', '1000000')}
-            {ItemShowOdd('Giá trị thị trường của CK', '1000000')}
-            {ItemShowEven('Giá trị chứng khoán quyền ', '1000000')}
-            {ItemShowOdd('Số dư tiền có trong tài khoản', '1000000')}
-            {ItemShowEven('Tiền chở về', '1000000')}
-            {ItemShowOdd('Tiền tối đa được ứng trước', '1000000')}
-            {ItemShowEven('Cổ tức tiền', '1000000')}
-            {ItemShowOdd('Tiền rút được', '1000000')}
-            {ItemShowEven('Nợ', '1000000')}
+          {ItemShowEven(i18n.t('netAssetValue'), '1000000')}
+            {ItemShowOdd(i18n.t('fieldValue'), '1000000')}
+            {ItemShowEven(i18n.t('stockValue'), '1000000')}
+            {ItemShowOdd(i18n.t('balanceInTheAccount'), '1000000')}
+            {ItemShowEven(i18n.t('waitingMoney'), '1000000')}
+            {ItemShowOdd(i18n.t('maximumAmountAdvance'), '1000000')}
+            {ItemShowEven(i18n.t('dividend'), '1000000')}
+            {ItemShowOdd(i18n.t('withdrawableMoney'), '1000000')}
+            {ItemShowEven(i18n.t('debt'), '1000000')}
             {ItemShowOdd('Rtt')}
             <Text style={styles.status}>TRẠNGN THÁI CHỨNG KHOÁN</Text>
             <View style={styles.viewStock}>
-              <Text style={styles.labelStock}>Mã</Text>
-              <Text style={styles.labelStock}>GD</Text>
-              <Text style={styles.labelStock}>Chờ GD</Text>
-              <Text style={styles.labelStock}>Chờ về</Text>
-              <Text style={styles.labelStock}>Ký quỹ</Text>
-              <Text style={styles.labelStock}>Tổng</Text>
+            <Text style={styles.labelStock}>{i18n.t('code')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('transaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('waitTransaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('wait')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('deposit')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('total')}</Text>
             </View>
             <View style={styles.lineStock} />
             {data.map((item, index) => {
@@ -190,24 +190,24 @@ const PropertyTab = () => {
         />
         {checkProperty && (
           <View>
-            {ItemShowEven('Giá trị tài sản ròng', '1000000')}
-            {ItemShowOdd('Giá trị thị trường của CK', '1000000')}
-            {ItemShowEven('Giá trị chứng khoán quyền ', '1000000')}
-            {ItemShowOdd('Số dư tiền có trong tài khoản', '1000000')}
-            {ItemShowEven('Tiền chở về', '1000000')}
-            {ItemShowOdd('Tiền tối đa được ứng trước', '1000000')}
-            {ItemShowEven('Cổ tức tiền', '1000000')}
-            {ItemShowOdd('Tiền rút được', '1000000')}
-            {ItemShowEven('Nợ', '1000000')}
+          {ItemShowEven(i18n.t('netAssetValue'), '1000000')}
+            {ItemShowOdd(i18n.t('fieldValue'), '1000000')}
+            {ItemShowEven(i18n.t('stockValue'), '1000000')}
+            {ItemShowOdd(i18n.t('balanceInTheAccount'), '1000000')}
+            {ItemShowEven(i18n.t('waitingMoney'), '1000000')}
+            {ItemShowOdd(i18n.t('maximumAmountAdvance'), '1000000')}
+            {ItemShowEven(i18n.t('dividend'), '1000000')}
+            {ItemShowOdd(i18n.t('withdrawableMoney'), '1000000')}
+            {ItemShowEven(i18n.t('debt'), '1000000')}
             {ItemShowOdd('Rtt')}
             <Text style={styles.status}>TRẠNGN THÁI CHỨNG KHOÁN</Text>
             <View style={styles.viewStock}>
-              <Text style={styles.labelStock}>Mã</Text>
-              <Text style={styles.labelStock}>GD</Text>
-              <Text style={styles.labelStock}>Chờ GD</Text>
-              <Text style={styles.labelStock}>Chờ về</Text>
-              <Text style={styles.labelStock}>Ký quỹ</Text>
-              <Text style={styles.labelStock}>Tổng</Text>
+            <Text style={styles.labelStock}>{i18n.t('code')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('transaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('waitTransaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('wait')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('deposit')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('total')}</Text>
             </View>
             <View style={styles.lineStock} />
             {data.map((item, index) => {
@@ -234,24 +234,24 @@ const PropertyTab = () => {
         />
         {checkFlexible && (
           <View>
-            {ItemShowEven('Giá trị tài sản ròng', '1000000')}
-            {ItemShowOdd('Giá trị thị trường của CK', '1000000')}
-            {ItemShowEven('Giá trị chứng khoán quyền ', '1000000')}
-            {ItemShowOdd('Số dư tiền có trong tài khoản', '1000000')}
-            {ItemShowEven('Tiền chở về', '1000000')}
-            {ItemShowOdd('Tiền tối đa được ứng trước', '1000000')}
-            {ItemShowEven('Cổ tức tiền', '1000000')}
-            {ItemShowOdd('Tiền rút được', '1000000')}
-            {ItemShowEven('Nợ', '1000000')}
+          {ItemShowEven(i18n.t('netAssetValue'), '1000000')}
+            {ItemShowOdd(i18n.t('fieldValue'), '1000000')}
+            {ItemShowEven(i18n.t('stockValue'), '1000000')}
+            {ItemShowOdd(i18n.t('balanceInTheAccount'), '1000000')}
+            {ItemShowEven(i18n.t('waitingMoney'), '1000000')}
+            {ItemShowOdd(i18n.t('maximumAmountAdvance'), '1000000')}
+            {ItemShowEven(i18n.t('dividend'), '1000000')}
+            {ItemShowOdd(i18n.t('withdrawableMoney'), '1000000')}
+            {ItemShowEven(i18n.t('debt'), '1000000')}
             {ItemShowOdd('Rtt')}
             <Text style={styles.status}>TRẠNGN THÁI CHỨNG KHOÁN</Text>
             <View style={styles.viewStock}>
-              <Text style={styles.labelStock}>Mã</Text>
-              <Text style={styles.labelStock}>GD</Text>
-              <Text style={styles.labelStock}>Chờ GD</Text>
-              <Text style={styles.labelStock}>Chờ về</Text>
-              <Text style={styles.labelStock}>Ký quỹ</Text>
-              <Text style={styles.labelStock}>Tổng</Text>
+            <Text style={styles.labelStock}>{i18n.t('code')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('transaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('waitTransaction')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('wait')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('deposit')}</Text>
+              <Text style={styles.labelStock}>{i18n.t('total')}</Text>
             </View>
             <View style={styles.lineStock} />
             {data.map((item, index) => {

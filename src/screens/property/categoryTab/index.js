@@ -40,7 +40,7 @@ const RenderItem = ({item, index}) => {
           style={{
             flex: 1,
           }}>
-          <Text style={styles.value}>Giá vốn</Text>
+          <Text style={styles.value}>{i18n.t('price')}</Text>
           <Text style={styles.value}>{item.currentMoney}</Text>
         </View>
         <View
@@ -49,7 +49,7 @@ const RenderItem = ({item, index}) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text style={styles.value}>Tổng khối lượng</Text>
+          <Text style={styles.value}>{i18n.t('total')}</Text>
           <Text style={styles.value}>{item.all}</Text>
         </View>
         <View
@@ -58,7 +58,7 @@ const RenderItem = ({item, index}) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text style={styles.value}>Được GD</Text>
+          <Text style={styles.value}>{i18n.t('traded')}</Text>
           <Text style={styles.value}>{item.purchase}</Text>
         </View>
       </View>
@@ -102,8 +102,8 @@ const CategoryTab = () => {
           <View style={{backgroundColor: '#FFFFFF'}}>
             <Text style={styles.nameItem}>NGUYỄN VĂN A - 0394xxx9332 </Text>
             <View style={styles.viewMoney}>
-              <Text style={styles.txtAll}>Tổng tài sản: </Text>
-              <Text style={styles.txtMoneyAll}>19.025.800</Text>
+              <Text style={styles.txtAll}>{i18n.t('totalAssets')}</Text>
+              <Text style={styles.txtMoneyAll}> 19.025.800</Text>
             </View>
             {dataAll.map((item, index) => {
               return <RenderItem item={item} index={index} key={index} />;
@@ -119,8 +119,8 @@ const CategoryTab = () => {
           <View style={{backgroundColor: '#FFFFFF'}}>
             <Text style={styles.nameItem}>NGUYỄN VĂN A - 0394xxx9332 </Text>
             <View style={styles.viewMoney}>
-              <Text style={styles.txtAll}>Tổng tài sản: </Text>
-              <Text style={styles.txtMoneyAll}>19.025.800</Text>
+            <Text style={styles.txtAll}>{i18n.t('totalAssets')}</Text>
+              <Text style={styles.txtMoneyAll}> 19.025.800</Text>
             </View>
             {dataAll.map((item, index) => {
               return <RenderItem item={item} index={index} key={index} />;
@@ -136,8 +136,8 @@ const CategoryTab = () => {
           <View style={{backgroundColor: '#FFFFFF'}}>
             <Text style={styles.nameItem}>NGUYỄN VĂN A - 0394xxx9332 </Text>
             <View style={styles.viewMoney}>
-              <Text style={styles.txtAll}>Tổng tài sản: </Text>
-              <Text style={styles.txtMoneyAll}>19.025.800</Text>
+            <Text style={styles.txtAll}>{i18n.t('totalAssets')}</Text>
+              <Text style={styles.txtMoneyAll}> 19.025.800</Text>
             </View>
             {dataAll.map((item, index) => {
               return <RenderItem item={item} index={index} key={index} />;
@@ -153,8 +153,8 @@ const CategoryTab = () => {
           <View style={{backgroundColor: '#FFFFFF'}}>
             <Text style={styles.nameItem}>NGUYỄN VĂN A - 0394xxx9332 </Text>
             <View style={styles.viewMoney}>
-              <Text style={styles.txtAll}>Tổng tài sản: </Text>
-              <Text style={styles.txtMoneyAll}>19.025.800</Text>
+            <Text style={styles.txtAll}>{i18n.t('totalAssets')}</Text>
+              <Text style={styles.txtMoneyAll}> 19.025.800</Text>
             </View>
             {dataAll.map((item, index) => {
               return <RenderItem item={item} index={index} key={index} />;
@@ -170,8 +170,8 @@ const CategoryTab = () => {
           <View style={{backgroundColor: '#FFFFFF'}}>
             <Text style={styles.nameItem}>NGUYỄN VĂN A - 0394xxx9332 </Text>
             <View style={styles.viewMoney}>
-              <Text style={styles.txtAll}>Tổng tài sản: </Text>
-              <Text style={styles.txtMoneyAll}>19.025.800</Text>
+            <Text style={styles.txtAll}>{i18n.t('totalAssets')}</Text>
+              <Text style={styles.txtMoneyAll}> 19.025.800</Text>
             </View>
             {dataAll.map((item, index) => {
               return <RenderItem item={item} index={index} key={index} />;

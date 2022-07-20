@@ -117,10 +117,6 @@ const AuthStack = () => {
     </Stack.Navigator>
   );
 };
-// const AuthStack = () => {
-//   return <Stack.Navigator headerMode={'none'}></Stack.Navigator>;
-// };
-
 const AppNavigation = () => {
   let userCheck = true;
 
@@ -152,7 +148,7 @@ const AppNavigation = () => {
   }, []);
   return (
     <NavigationContainer>
-      {userCheck===false ? (
+      {userCheck === false ? (
         <Stack.Navigator>
           <Stack.Screen
             options={{headerShown: false}}
@@ -212,7 +208,7 @@ const AppNavigation = () => {
             name="AuthStack"
             component={AuthStack}
           />
-           <Stack.Screen
+          <Stack.Screen
             options={{headerShown: false}}
             name="Notification"
             component={Notification}

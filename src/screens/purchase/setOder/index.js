@@ -12,6 +12,7 @@ import React from 'react';
 import styles from './styles';
 import Images from '../../../assets';
 import {COLOR, WIDTH} from '../../../base/core';
+import i18n from '../../../translate/i18n'
 const SetOder = () => {
   const [data] = React.useState([
     {
@@ -233,21 +234,21 @@ const SetOder = () => {
         </View>
         <View style={styles.viewInfo}>
           <View style={styles.infoCode}>
-            <Text style={styles.textCode}>MÃ CK</Text>
+            <Text style={styles.textCode}>{i18n.t('codeCK')}</Text>
             <Image source={Images.iconInfo} style={styles.iconInfo} />
           </View>
           <View style={styles.btnSearchCode}>
             <Image source={Images.iconSearch} style={styles.iconSearch} />
-            <Text style={styles.price}>MÃ CK</Text>
+            <Text style={styles.price}>{i18n.t('codeCK')}</Text>
           </View>
           <View style={styles.btnPriceCode}>
-            <Text style={styles.price}>Giá giao dịch</Text>
+            <Text style={styles.price}>{i18n.t('transactionPrices')}</Text>
           </View>
         </View>
         <View style={styles.containerInfoPrice}>
           <View style={styles.viewInfoPriceFirst}>
             <View style={styles.viewFloor}>
-              <Text style={{...styles.txtPrice, color: '#EB27ED'}}>Trần</Text>
+              <Text style={{...styles.txtPrice, color: '#EB27ED'}}>{i18n.t('ceiling')}</Text>
             </View>
             <View style={styles.viewFloor}>
               <Text style={{...styles.txtPrice, color: '#EB27ED'}}>50.5</Text>
@@ -255,7 +256,7 @@ const SetOder = () => {
           </View>
           <View style={styles.viewInfoPriceFirst}>
             <View style={styles.viewFloor}>
-              <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>Sàn</Text>
+              <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>{i18n.t('floor')}</Text>
             </View>
             <View style={styles.viewFloor}>
               <Text style={{...styles.txtPrice, color: '#2BE4EE'}}>50.5</Text>
@@ -272,7 +273,7 @@ const SetOder = () => {
           <View style={{...styles.viewInfoPriceSecond, marginRight: WIDTH * 8}}>
             <View style={styles.viewFloor}>
               <Text style={{...styles.txtPrice, color: '#5A5959'}}>
-                Giá khuyến nghị mua
+           {i18n.t('recommendedPurchasePrice')}
               </Text>
             </View>
             <View style={styles.priceBuy}>
@@ -283,7 +284,7 @@ const SetOder = () => {
           <View style={styles.viewInfoPriceSecond}>
             <View style={styles.viewFloor}>
               <Text style={{...styles.txtPrice, color: '#5A5959'}}>
-                Giá khuyến nghị bán
+              {i18n.t('recommendedSellingPrice')}
               </Text>
             </View>
             <View style={styles.priceBuy}>
@@ -297,7 +298,7 @@ const SetOder = () => {
             <TouchableOpacity style={styles.btnPlus}>
               <Image source={Images.iconIncre} style={styles.icon} />
             </TouchableOpacity>
-            <Text style={styles.plus}>Giá</Text>
+            <Text style={styles.plus}>{i18n.t('prices')}</Text>
             <TouchableOpacity style={styles.btnPlus}>
               <Image source={Images.iconDecre} style={styles.icon} />
             </TouchableOpacity>
@@ -314,11 +315,11 @@ const SetOder = () => {
         </View>
         <View style={styles.containerlimit}>
           <View style={{...styles.viewLimit, marginRight: WIDTH * 31}}>
-            <Text>Mua tối đa:</Text>
+            <Text>{i18n.t('buyMax')}:</Text>
             <Text>00</Text>
           </View>
           <View style={{...styles.viewLimit, marginLeft: WIDTH * 31}}>
-            <Text>Bán tối đa: </Text>
+            <Text>{i18n.t('sellMax')}: </Text>
             <Text>00</Text>
           </View>
         </View>

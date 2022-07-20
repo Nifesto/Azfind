@@ -14,14 +14,15 @@ import {COLOR, WIDTH_WINDOW} from '../../base/core';
 import Drawer from '../../navigation/drawer';
 import ListOrder from './listOrder';
 import SetOder from './setOder';
+import i18n from '../../translate/i18n';
 const Purchase = ({navigation}) => {
   const [visible, setVisible] = React.useState(false);
   const [choose, setChoose] = React.useState(0);
   const refScroll = React.useRef();
   const [title, setTitle] = useState([
-    {name: 'Đặt lệnh'},
+    {name: i18n.t('setCommand')},
     {
-      name: 'Sổ lệnh',
+      name: i18n.t('listCommand'),
     },
   ]);
   const onPress = (item, index) => {

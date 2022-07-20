@@ -4,6 +4,7 @@ import React from 'react';
 import {COLOR, WIDTH, WIDTH_WINDOW} from '../../../../base/core';
 import Images from '../../../../assets';
 import styles from './styles';
+import i18n from '../../../../translate/i18n';
 const OrderNomal = () => {
   const [data] = React.useState([
     {
@@ -87,7 +88,7 @@ const OrderNomal = () => {
   return (
     <View style={styles.container}>
       <View style={styles.head}>
-        <Text>Tài khoản</Text>
+        <Text>{i18n.t('account')}</Text>
         <View style={styles.row}>
           <Text>Tích sản cho con - 0155453xxx</Text>
           <Image source={Images.iconDropdown} style={styles.iconDropdown} />
@@ -95,7 +96,7 @@ const OrderNomal = () => {
       </View>
       <View style={styles.viewCancel}>
         <TouchableOpacity style={styles.BtnCancel}>
-          <Text>Huỷ nhiều lệnh</Text>
+          <Text>{i18n.t('cancels')}</Text>
         </TouchableOpacity>
         <View style={{flex: 1}} />
       </View>
@@ -106,7 +107,7 @@ const OrderNomal = () => {
           backgroundColor: COLOR.WHITE_P,
         }}>
         <View style={{alignItems: 'center', flex: 1}}>
-          <Text>Mã CK</Text>
+          <Text>{i18n.t('codeCK')}</Text>
           <Image
             source={Images.iconDropdown}
             style={{...styles.iconDropdown, tintColor: '#272727'}}
@@ -118,7 +119,7 @@ const OrderNomal = () => {
             textAlign: 'center',
             height: '100%',
           }}>
-          Giá
+         {i18n.t('prices')}
         </Text>
         <Text
           style={{
@@ -126,7 +127,7 @@ const OrderNomal = () => {
             textAlign: 'center',
             height: '100%',
           }}>
-          Khối lượng
+         {i18n.t('mass')}
         </Text>
         <View
           style={{
@@ -147,7 +148,7 @@ const OrderNomal = () => {
             textAlign: 'center',
             height: '100%',
           }}>
-          Huỷ
+           {i18n.t('cancel')}
         </Text>
       </View>
       <View style={{flex: 1}}>

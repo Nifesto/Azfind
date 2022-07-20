@@ -184,7 +184,7 @@ const Stock = () => {
       <View style={styles.head}>
         <TouchableOpacity style={styles.btnSearch}>
           <Image source={Images.iconSearch} style={styles.iconSearch} />
-          <Text style={styles.txtSearch}>Tìm mã</Text>
+          <Text style={styles.txtSearch}>{i18n.t('findCode')}</Text>
         </TouchableOpacity>
       </View>
       <RenderHeader />

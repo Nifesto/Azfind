@@ -182,9 +182,9 @@ const Favorite = () => {
   return (
     <View style={styles.container}>
       <View style={styles.viewAdd}>
-        <Text>Danh mục</Text>
+        <Text>{i18n.t('categories')}</Text>
         <View style={styles.cate}>
-          <Text style={styles.txtSearch}>Tìm mã</Text>
+          <Text style={styles.txtSearch}>{i18n.t('findCode')}</Text>
         </View>
         <TouchableOpacity>
           <Image source={Images.iconPlus} style={styles.iconPlus} />
@@ -193,7 +193,7 @@ const Favorite = () => {
       <View style={styles.head}>
         <TouchableOpacity style={styles.btnSearch}>
           <Image source={Images.iconSearch} style={styles.iconSearch} />
-          <Text style={styles.txtSearch}>Tìm mã</Text>
+          <Text style={styles.txtSearch}>{i18n.t('findCode')}</Text>
         </TouchableOpacity>
       </View>
       <RenderHeader />
